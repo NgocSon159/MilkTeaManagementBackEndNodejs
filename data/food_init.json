@@ -1,0 +1,486 @@
+[
+    {
+        "_id": "FO001",
+        "name": "Mocha Ice Blended",
+        "price": {
+            "$numberInt": "59000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA001",
+        "status": true
+    },
+    {
+        "_id": "FO002",
+        "name": "Caramel Ice Blended",
+        "price": {
+            "$numberInt": "59000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA001",
+        "status": true
+    },
+    {
+        "_id": "FO003",
+        "name": "Hazelnut Ice Blended",
+        "price": {
+            "$numberInt": "59000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA001",
+        "status": true
+    },
+    {
+        "_id": "FO004",
+        "name": "Cookie Ice Blended",
+        "price": {
+            "$numberInt": "59000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA001",
+        "status": true
+    },
+    {
+        "_id": "FO005",
+        "name": "Hot Chocolate Toffee Almond",
+        "price": {
+            "$numberInt": "59000"
+        },
+        "size": "Large",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA002",
+        "status": true
+    },
+    {
+        "_id": "FO006",
+        "name": "Iced Chocolate Mocha Almod",
+        "price": {
+            "$numberInt": "59000"
+        },
+        "size": "Large",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA002",
+        "status": true
+    },
+    {
+        "_id": "FO007",
+        "name": "Chocolate Ice Blended",
+        "price": {
+            "$numberInt": "59000"
+        },
+        "size": "Large",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA002",
+        "status": true
+    },
+    {
+        "_id": "FO008",
+        "name": "Green Apple Soda",
+        "price": {
+            "$numberInt": "45000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA003",
+        "status": true
+    },
+    {
+        "_id": "FO009",
+        "name": "Raspberry Soda",
+        "price": {
+            "$numberInt": "45000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA003",
+        "status": true
+    },
+    {
+        "_id": "FO0010",
+        "name": "Blueberry Soda",
+        "price": {
+            "$numberInt": "45000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA003",
+        "status": true
+    },
+    {
+        "_id": "FO011",
+        "name": "Mojito Lemon",
+        "price": {
+            "$numberInt": "45000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA003",
+        "status": true
+    },
+    {
+        "_id": "FO012",
+        "name": "Mojito Passion Fruit",
+        "price": {
+            "$numberInt": "45000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA003",
+        "status": true
+    },
+    {
+        "_id": "FO013",
+        "name": "Blueberry Smoothie",
+        "price": {
+            "$numberInt": "59000"
+        },
+        "size": "Large",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA003",
+        "status": true
+    },
+    {
+        "_id": "FO014",
+        "name": "Stawberry Guava Cookies Smoothie",
+        "price": {
+            "$numberInt": "59000"
+        },
+        "size": "Large",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA003",
+        "status": true
+    },
+    {
+        "_id": "FO015",
+        "name": "Mango Orange Cookies Smoothie",
+        "price": {
+            "$numberInt": "59000"
+        },
+        "size": "Large",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA003",
+        "status": true
+    },
+    {
+        "_id": "FO016",
+        "name": "Fresh Orange Juice",
+        "price": {
+            "$numberInt": "65000"
+        },
+        "size": "Large",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA003",
+        "status": true
+    },
+    {
+        "_id": "FO017",
+        "name": "VietNamese Coffee",
+        "price": {
+            "$numberInt": "29000"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA004",
+        "status": true
+    },
+    {
+        "_id": "FO018",
+        "name": "VietNamese Coffee",
+        "price": {
+            "$numberInt": "39000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA004",
+        "status": true
+    },
+    {
+        "_id": "FO019",
+        "name": "VietNamese White Coffee",
+        "price": {
+            "$numberInt": "29000"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA004",
+        "status": true
+    },
+    {
+        "_id": "FO020",
+        "name": "VietNamese White Coffee",
+        "price": {
+            "$numberInt": "39000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA004",
+        "status": true
+    },
+    {
+        "_id": "FO021",
+        "name": "VietNamese Milk Coffee",
+        "price": {
+            "$numberInt": "29000"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA004",
+        "status": true
+    },
+    {
+        "_id": "FO022",
+        "name": "VietNamese Milk Coffee",
+        "price": {
+            "$numberInt": "39000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA004",
+        "status": true
+    },
+    {
+        "_id": "FO023",
+        "name": "Expresso",
+        "price": {
+            "$numberInt": "35000"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO024",
+        "name": "Expresso",
+        "price": {
+            "$numberInt": "45000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO025",
+        "name": "Condensed Milk Espresso",
+        "price": {
+            "$numberInt": "35000"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO026",
+        "name": "Condensed Milk Espresso",
+        "price": {
+            "$numberInt": "45000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO027",
+        "name": "Americano",
+        "price": {
+            "$numberInt": "39000"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO028",
+        "name": "Americano",
+        "price": {
+            "$numberInt": "49000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO029",
+        "name": "Cappuchino",
+        "price": {
+            "$numberInt": "45000"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO030",
+        "name": "Cappuchino",
+        "price": {
+            "$numberInt": "55000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO031",
+        "name": "Latte",
+        "price": {
+            "$numberInt": "45000"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO032",
+        "name": "Latte",
+        "price": {
+            "$numberInt": "55000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO033",
+        "name": "Mocha",
+        "price": {
+            "$numberInt": "49000"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO034",
+        "name": "Mocha",
+        "price": {
+            "$numberInt": "59000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO035",
+        "name": "Caramel Macchiato",
+        "price": {
+            "$numberInt": "55"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO036",
+        "name": "Caramel Macchiato",
+        "price": {
+            "$numberInt": "65000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA005",
+        "status": true
+    },
+    {
+        "_id": "FO037",
+        "name": "Black Tea",
+        "price": {
+            "$numberInt": "35000"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA006",
+        "status": true
+    },
+    {
+        "_id": "FO038",
+        "name": "Flavored Tea",
+        "price": {
+            "$numberInt": "35000"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA006",
+        "status": true
+    },
+    {
+        "_id": "FO039",
+        "name": "Black Tea Macchiato",
+        "price": {
+            "$numberInt": "38000"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA006",
+        "status": true
+    },
+    {
+        "_id": "FO040",
+        "name": "Raspberry Macchiato",
+        "price": {
+            "$numberInt": "42"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA006",
+        "status": true
+    },
+    {
+        "_id": "FO041",
+        "name": "Peach Tea Mania",
+        "price": {
+            "$numberInt": "42000"
+        },
+        "size": "Small",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA006",
+        "status": true
+    },
+    {
+        "_id": "FO042",
+        "name": "Peach Tea Mania",
+        "price": {
+            "$numberInt": "55000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA006",
+        "status": true
+    },
+    {
+        "_id": "FO043",
+        "name": "Matcha Latte",
+        "price": {
+            "$numberInt": "55000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA006",
+        "status": true
+    },
+    {
+        "_id": "FO044",
+        "name": "Matcha Ice Blended",
+        "price": {
+            "$numberInt": "59000"
+        },
+        "size": "Medium",
+        "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
+        "categoryID": "CA006",
+        "status": true
+    }
+]
