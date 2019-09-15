@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ci": "tsc",
-    "dev:hello": "nodemon src/hello.ts",
-    "dev:bo-milkTea": "nodemon src/bo-milkTea/server.ts"
+    "dev:bo-milkTea": "nodemon src/bo-milkTea/server.ts",
+    "dev:milkTea": "nodemon src/milkTea/server.ts"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

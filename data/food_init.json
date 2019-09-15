@@ -1,6 +1,6 @@
 [
     {
-        "_id": "FO001",
+        "foodID": "FO001",
         "name": "Mocha Ice Blended",
         "price": {
             "$numberInt": "59000"
@@ -11,7 +11,7 @@
         "status": true
     },
     {
-        "_id": "FO002",
+        "foodID": "FO002",
         "name": "Caramel Ice Blended",
         "price": {
             "$numberInt": "59000"
@@ -22,7 +22,7 @@
         "status": true
     },
     {
-        "_id": "FO003",
+        "foodID": "FO003",
         "name": "Hazelnut Ice Blended",
         "price": {
             "$numberInt": "59000"
@@ -33,7 +33,7 @@
         "status": true
     },
     {
-        "_id": "FO004",
+        "foodID": "FO004",
         "name": "Cookie Ice Blended",
         "price": {
             "$numberInt": "59000"
@@ -44,7 +44,7 @@
         "status": true
     },
     {
-        "_id": "FO005",
+        "foodID": "FO005",
         "name": "Hot Chocolate Toffee Almond",
         "price": {
             "$numberInt": "59000"
@@ -55,7 +55,7 @@
         "status": true
     },
     {
-        "_id": "FO006",
+        "foodID": "FO006",
         "name": "Iced Chocolate Mocha Almod",
         "price": {
             "$numberInt": "59000"
@@ -66,7 +66,7 @@
         "status": true
     },
     {
-        "_id": "FO007",
+        "foodID": "FO007",
         "name": "Chocolate Ice Blended",
         "price": {
             "$numberInt": "59000"
@@ -77,7 +77,7 @@
         "status": true
     },
     {
-        "_id": "FO008",
+        "foodID": "FO008",
         "name": "Green Apple Soda",
         "price": {
             "$numberInt": "45000"
@@ -88,7 +88,7 @@
         "status": true
     },
     {
-        "_id": "FO009",
+        "foodID": "FO009",
         "name": "Raspberry Soda",
         "price": {
             "$numberInt": "45000"
@@ -99,7 +99,7 @@
         "status": true
     },
     {
-        "_id": "FO0010",
+        "foodID": "FO0010",
         "name": "Blueberry Soda",
         "price": {
             "$numberInt": "45000"
@@ -110,7 +110,7 @@
         "status": true
     },
     {
-        "_id": "FO011",
+        "foodID": "FO011",
         "name": "Mojito Lemon",
         "price": {
             "$numberInt": "45000"
@@ -121,7 +121,7 @@
         "status": true
     },
     {
-        "_id": "FO012",
+        "foodID": "FO012",
         "name": "Mojito Passion Fruit",
         "price": {
             "$numberInt": "45000"
@@ -132,7 +132,7 @@
         "status": true
     },
     {
-        "_id": "FO013",
+        "foodID": "FO013",
         "name": "Blueberry Smoothie",
         "price": {
             "$numberInt": "59000"
@@ -143,7 +143,7 @@
         "status": true
     },
     {
-        "_id": "FO014",
+        "foodID": "FO014",
         "name": "Stawberry Guava Cookies Smoothie",
         "price": {
             "$numberInt": "59000"
@@ -154,7 +154,7 @@
         "status": true
     },
     {
-        "_id": "FO015",
+        "foodID": "FO015",
         "name": "Mango Orange Cookies Smoothie",
         "price": {
             "$numberInt": "59000"
@@ -165,7 +165,7 @@
         "status": true
     },
     {
-        "_id": "FO016",
+        "foodID": "FO016",
         "name": "Fresh Orange Juice",
         "price": {
             "$numberInt": "65000"
@@ -176,7 +176,7 @@
         "status": true
     },
     {
-        "_id": "FO017",
+        "foodID": "FO017",
         "name": "VietNamese Coffee",
         "price": {
             "$numberInt": "29000"
@@ -187,7 +187,7 @@
         "status": true
     },
     {
-        "_id": "FO018",
+        "foodID": "FO018",
         "name": "VietNamese Coffee",
         "price": {
             "$numberInt": "39000"
@@ -198,7 +198,7 @@
         "status": true
     },
     {
-        "_id": "FO019",
+        "foodID": "FO019",
         "name": "VietNamese White Coffee",
         "price": {
             "$numberInt": "29000"
@@ -209,7 +209,7 @@
         "status": true
     },
     {
-        "_id": "FO020",
+        "foodID": "FO020",
         "name": "VietNamese White Coffee",
         "price": {
             "$numberInt": "39000"
@@ -220,7 +220,7 @@
         "status": true
     },
     {
-        "_id": "FO021",
+        "foodID": "FO021",
         "name": "VietNamese Milk Coffee",
         "price": {
             "$numberInt": "29000"
@@ -231,7 +231,7 @@
         "status": true
     },
     {
-        "_id": "FO022",
+        "foodID": "FO022",
         "name": "VietNamese Milk Coffee",
         "price": {
             "$numberInt": "39000"
@@ -242,7 +242,7 @@
         "status": true
     },
     {
-        "_id": "FO023",
+        "foodID": "FO023",
         "name": "Expresso",
         "price": {
             "$numberInt": "35000"
@@ -253,7 +253,7 @@
         "status": true
     },
     {
-        "_id": "FO024",
+        "foodID": "FO024",
         "name": "Expresso",
         "price": {
             "$numberInt": "45000"
@@ -264,7 +264,7 @@
         "status": true
     },
     {
-        "_id": "FO025",
+        "foodID": "FO025",
         "name": "Condensed Milk Espresso",
         "price": {
             "$numberInt": "35000"
@@ -275,7 +275,7 @@
         "status": true
     },
     {
-        "_id": "FO026",
+        "foodID": "FO026",
         "name": "Condensed Milk Espresso",
         "price": {
             "$numberInt": "45000"
@@ -286,7 +286,7 @@
         "status": true
     },
     {
-        "_id": "FO027",
+        "foodID": "FO027",
         "name": "Americano",
         "price": {
             "$numberInt": "39000"
@@ -297,7 +297,7 @@
         "status": true
     },
     {
-        "_id": "FO028",
+        "foodID": "FO028",
         "name": "Americano",
         "price": {
             "$numberInt": "49000"
@@ -308,7 +308,7 @@
         "status": true
     },
     {
-        "_id": "FO029",
+        "foodID": "FO029",
         "name": "Cappuchino",
         "price": {
             "$numberInt": "45000"
@@ -319,7 +319,7 @@
         "status": true
     },
     {
-        "_id": "FO030",
+        "foodID": "FO030",
         "name": "Cappuchino",
         "price": {
             "$numberInt": "55000"
@@ -330,7 +330,7 @@
         "status": true
     },
     {
-        "_id": "FO031",
+        "foodID": "FO031",
         "name": "Latte",
         "price": {
             "$numberInt": "45000"
@@ -341,7 +341,7 @@
         "status": true
     },
     {
-        "_id": "FO032",
+        "foodID": "FO032",
         "name": "Latte",
         "price": {
             "$numberInt": "55000"
@@ -352,7 +352,7 @@
         "status": true
     },
     {
-        "_id": "FO033",
+        "foodID": "FO033",
         "name": "Mocha",
         "price": {
             "$numberInt": "49000"
@@ -363,7 +363,7 @@
         "status": true
     },
     {
-        "_id": "FO034",
+        "foodID": "FO034",
         "name": "Mocha",
         "price": {
             "$numberInt": "59000"
@@ -374,7 +374,7 @@
         "status": true
     },
     {
-        "_id": "FO035",
+        "foodID": "FO035",
         "name": "Caramel Macchiato",
         "price": {
             "$numberInt": "55"
@@ -385,7 +385,7 @@
         "status": true
     },
     {
-        "_id": "FO036",
+        "foodID": "FO036",
         "name": "Caramel Macchiato",
         "price": {
             "$numberInt": "65000"
@@ -396,7 +396,7 @@
         "status": true
     },
     {
-        "_id": "FO037",
+        "foodID": "FO037",
         "name": "Black Tea",
         "price": {
             "$numberInt": "35000"
@@ -407,7 +407,7 @@
         "status": true
     },
     {
-        "_id": "FO038",
+        "foodID": "FO038",
         "name": "Flavored Tea",
         "price": {
             "$numberInt": "35000"
@@ -418,7 +418,7 @@
         "status": true
     },
     {
-        "_id": "FO039",
+        "foodID": "FO039",
         "name": "Black Tea Macchiato",
         "price": {
             "$numberInt": "38000"
@@ -429,7 +429,7 @@
         "status": true
     },
     {
-        "_id": "FO040",
+        "foodID": "FO040",
         "name": "Raspberry Macchiato",
         "price": {
             "$numberInt": "42"
@@ -440,7 +440,7 @@
         "status": true
     },
     {
-        "_id": "FO041",
+        "foodID": "FO041",
         "name": "Peach Tea Mania",
         "price": {
             "$numberInt": "42000"
@@ -451,7 +451,7 @@
         "status": true
     },
     {
-        "_id": "FO042",
+        "foodID": "FO042",
         "name": "Peach Tea Mania",
         "price": {
             "$numberInt": "55000"
@@ -462,7 +462,7 @@
         "status": true
     },
     {
-        "_id": "FO043",
+        "foodID": "FO043",
         "name": "Matcha Latte",
         "price": {
             "$numberInt": "55000"
@@ -473,7 +473,7 @@
         "status": true
     },
     {
-        "_id": "FO044",
+        "foodID": "FO044",
         "name": "Matcha Ice Blended",
         "price": {
             "$numberInt": "59000"
