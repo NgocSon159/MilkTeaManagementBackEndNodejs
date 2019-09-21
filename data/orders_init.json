@@ -1,0 +1,365 @@
+[
+  {
+    "orderID": "OD00001",
+    "branchID": "BR001",
+    "createdOn": {
+      "$date": "2017-02-08T12:10:40Z"
+    },
+    "createdBy": "namanh",
+    "servedOn": {
+      "$date": "2017-02-08T12:15:40Z"
+    },
+    "servedBy": "nhusang",
+    "completedOn": {
+      "$date": "2017-02-08T12:25:40Z"
+    },
+    "completedBy": "namanh",
+    "timeDone": 300,
+    "phoneNumber": "",
+    "discount": 0,
+    "total": 118000,
+    "cash": 120000,
+    "change": 2000,
+    "statusOrder": "Completed",
+    "status": true,
+    "foods": [
+      {
+        "foodID": "FO004",
+        "name": "Cookie Ice Blended",
+        "size": "Medium",
+        "price": 59000,
+        "quantity": 1,
+        "sum": 59000,
+        "note": ["It nuoc", "Nhieu da"]
+      },
+      {
+        "foodID": "FO002",
+        "name": "Caramel Ice Blended",
+        "size": "Medium",
+        "price": 59000,
+        "quantity": 1,
+        "sum": 59000,
+        "note": ["50% muoi", "25% knorr"]
+      }
+    ]
+  },
+  {
+    "orderID": "OD00002",
+    "branchID": "BR001",
+    "createdOn": {
+      "$date": "2019-04-05T10:01:00Z"
+    },
+    "createdBy": "namanh",
+    "servedOn": {
+      "$date": "2019-04-05T10:06:00Z"
+    },
+    "servedBy": "nhusang",
+    "completedOn": {
+      "$date": "2019-04-05T10:16:00Z"
+    },
+    "completedBy": "namanh",
+    "timeDone": 300,
+    "phoneNumber": "",
+    "discount": 0,
+    "total": 118000,
+    "cash": 150000,
+    "change": 32000,
+    "statusOrder": "Completed",
+    "status": true,
+    "foods": [
+      {
+        "foodID": "FO005",
+        "name": "Hot Chocolate Toffee Almond",
+        "size": "Large",
+        "price": 59000,
+        "quantity": 1,
+        "sum": 59000,
+        "note": []
+      },
+      {
+        "orderID": "OD00002",
+        "foodID": "FO004",
+        "name": "Cookie Ice Blended",
+        "size": "Medium",
+        "price": 59000,
+        "quantity": 1,
+        "sum": 59000,
+        "note": []
+      }
+    ]
+  },
+  {
+    "orderID": "OD00003",
+    "branchID": "BR001",
+    "createdOn": {
+      "$date": "2019-04-06T10:02:00Z"
+    },
+    "createdBy": "namanh",
+    "servedOn": {
+      "$date": "2019-04-06T10:07:00Z"
+    },
+    "servedBy": "trangthao",
+    "completedOn": {
+      "$date": "2019-04-06T10:17:00Z"
+    },
+    "completedBy": "namanh",
+    "timeDone": 300,
+    "phoneNumber": "",
+    "discount": 0,
+    "total": 59000,
+    "cash": 60000,
+    "change": 1000,
+    "statusOrder": "Completed",
+    "status": true,
+    "foods": [
+      {
+        "foodID": "FO005",
+        "name": "Hot Chocolate Toffee Almond",
+        "size": "Large",
+        "price": 59000,
+        "quantity": 1,
+        "sum": 59000,
+        "note": []
+      }
+    ]
+  },
+  {
+    "orderID": "OD00004",
+    "branchID": "BR001",
+    "createdOn": {
+      "$date": "2019-04-07T10:01:00Z"
+    },
+    "createdBy": "namanh",
+    "servedOn": "",
+    "servedBy": "",
+    "completedOn": "",
+    "completedBy": "",
+    "timeDone": "",
+    "phoneNumber": "",
+    "discount": 0,
+    "total": 59000,
+    "cash": "",
+    "change": "",
+    "statusOrder": "Ordered",
+    "status": true,
+    "foods": [
+      {
+        "foodID": "FO004",
+        "name": "Cookie Ice Blended",
+        "size": "Medium",
+        "price": 59000,
+        "quantity": 1,
+        "sum": 59000,
+        "note": []
+      }
+    ]
+  },
+  {
+    "orderID": "OD00005",
+    "branchID": "BR001",
+    "createdOn": {
+      "$date": "2019-04-07T11:00:00Z"
+    },
+    "createdBy": "namanh",
+    "servedOn": "",
+    "servedBy": "",
+    "completedOn": {
+      "$date": "2019-04-07T11:01:00Z"
+    },
+    "completedBy": "nhusang",
+    "timeDone": "",
+    "phoneNumber": "",
+    "discount": 0,
+    "total": 118000,
+    "cash": "",
+    "change": "",
+    "statusOrder": "Processing",
+    "status": true,
+    "foods": [
+      {
+        "foodID": "FO002",
+        "name": "Caramel Ice Blended",
+        "size": "Medium",
+        "price": 59000,
+        "quantity": 2,
+        "sum": 118000,
+        "note": []
+      }
+    ]
+  },
+  {
+    "orderID": "OD00006",
+    "branchID": "BR001",
+    "createdOn": {
+      "$date": "2019-04-07T12:01:00Z"
+    },
+    "createdBy": "namanh",
+    "servedOn": {
+      "$date": "2019-04-07T12:06:00Z"
+    },
+    "servedBy": "nhusang",
+    "completedOn": {
+      "$date": "2019-04-07T12:10:00Z"
+    },
+    "completedBy": "nhusang",
+    "timeDone": 300,
+    "phoneNumber": "",
+    "discount": 0,
+    "total": 90000,
+    "cash": "",
+    "change": "",
+    "statusOrder": "Completed",
+    "status": true,
+    "foods": [
+      {
+        "foodID": "FO008",
+        "name": "Green Apple Soda",
+        "size": "Medium",
+        "price": 45000,
+        "quantity": 2,
+        "sum": 90000,
+        "note": []
+      }
+    ]
+  },
+  {
+    "orderID": "OD00007",
+    "branchID": "BR001",
+    "createdOn": {
+      "$date": "2019-04-07T13:01:00Z"
+    },
+    "createdBy": "namanh",
+    "servedOn": {
+      "$date": "2019-04-07T13:15:00Z"
+    },
+    "servedBy": "nhusang",
+    "completedOn": {
+      "$date": "2019-04-07T13:18:00Z"
+    },
+    "completedBy": "duongtong",
+    "timeDone": 840,
+    "phoneNumber": "",
+    "discount": 0,
+    "total": 59000,
+    "cash": "",
+    "change": "",
+    "statusOrder": "Served",
+    "status": true,
+    "foods": [
+      {
+        "foodID": "FO004",
+        "name": "Cookie Ice Blended",
+        "size": "Medium",
+        "price": 59000,
+        "quantity": 1,
+        "sum": 59000,
+        "note": []
+      }
+    ]
+  },
+  {
+    "orderID": "OD00008",
+    "branchID": "BR001",
+    "createdOn": {
+      "$date": "2019-04-08T13:01:00Z"
+    },
+    "createdBy": "namanh",
+    "servedOn": {
+      "$date": "2019-04-08T13:15:00Z"
+    },
+    "servedBy": "nhusang",
+    "completedOn": {
+      "$date": "2019-04-08T15:00:00Z"
+    },
+    "completedBy": "boss",
+    "timeDone": 840,
+    "phoneNumber": "",
+    "discount": 0,
+    "total": 59000,
+    "cash": 100000,
+    "change": 41000,
+    "statusOrder": "Completed",
+    "status": false,
+    "foods": [
+      {
+        "foodID": "FO004",
+        "name": "Cookie Ice Blended",
+        "size": "Medium",
+        "price": 59000,
+        "quantity": 1,
+        "sum": 59000,
+        "note": []
+      }
+    ]
+  },
+  {
+    "orderID": "OD00009",
+    "branchID": "BR001",
+    "createdOn": {
+      "$date": "2019-04-08T14:01:00Z"
+    },
+    "createdBy": "namanh",
+    "servedOn": {
+      "$date": "2019-04-08T14:15:00Z"
+    },
+    "servedBy": "nhusang",
+    "completedOn": {
+      "$date": "2019-04-08T15:01:00Z"
+    },
+    "completedBy": "boss",
+    "timeDone": 840,
+    "phoneNumber": "",
+    "discount": 0,
+    "total": 130000,
+    "cash": 130000,
+    "change": 0,
+    "statusOrder": "Completed",
+    "status": false,
+    "foods": [
+      {
+        "foodID": "FO016",
+        "name": "Fresh Orange Juice",
+        "size": "Large",
+        "price": 65000,
+        "quantity": 2,
+        "sum": 130000,
+        "note": ["50% chua"]
+      }
+    ]
+  },
+  {
+    "orderID": "OD00010",
+    "branchID": "BR001",
+    "createdOn": {
+      "$date": "2019-04-08T14:10:00Z"
+    },
+    "createdBy": "namanh",
+    "servedOn": {
+      "$date": "2019-04-08T14:15:00Z"
+    },
+    "servedBy": "nhusang",
+    "completedOn": {
+      "$date": "2019-04-08T15:02:00Z"
+    },
+    "completedBy": "boss",
+    "timeDone": 300,
+    "phoneNumber": "",
+    "discount": 0,
+    "total": 177000,
+    "cash": "",
+    "change": "",
+    "statusOrder": "Served",
+    "status": false,
+    "foods": [
+      {
+        "foodID": "FO006",
+        "name": "Iced Chocolate Mocha Almod",
+        "size": "Large",
+        "price": 59000,
+        "quantity": 3,
+        "sum": 177000,
+        "note": []
+      }
+    ]
+  }
+]
