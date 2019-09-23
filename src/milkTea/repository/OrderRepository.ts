@@ -11,4 +11,5 @@ export interface OrderRepository {
     getOrderOfCashier(): Observable<Order[]>;
     updateToServered(orderId: string, userName: string): Observable<boolean>;
     updateToCompleted(object: Order, orderId: string): Observable<Order>;
+    cancelOrder(orderId: string): Observable<boolean>;
 }

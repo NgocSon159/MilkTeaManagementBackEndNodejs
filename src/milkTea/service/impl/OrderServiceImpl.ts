@@ -37,4 +37,8 @@ export class OrderServiceImpl implements OrderService{
     updateToCompleted(object: Order, orderId: string): Observable<Order> {
         return this.orderRepository.updateToCompleted(object, orderId);
     }
+
+    cancelOrder(orderId: string): Observable<boolean> {
+        return this.orderRepository.cancelOrder(orderId);
+    }
 }

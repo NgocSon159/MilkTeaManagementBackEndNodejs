@@ -5,6 +5,7 @@ import {SearchModelBuilder} from "../../common/util/SearchModelBuilder";
 import {OrderService} from "../service/OrderService";
 import {Observable} from "rxjs";
 import {Order} from "../model/Order";
+import {OrderBuilder} from "../builder/OrderBuilder";
 
 export class OrderController {
     constructor(private orderService: OrderService) {
@@ -64,8 +65,17 @@ export class OrderController {
 
     updateToCompleted(req: Request, res: Response) {
         const orderId = req.params.orderId;
-        const order: Order = req.body;
+        const order = OrderBuilder.buildToOrder(req.body);
         return this.orderService.updateToCompleted(order, orderId).subscribe(result => {
+            return ResponseUtil.responseSuccess(res, result);
+        }, error => {
+            return ResponseUtil.responseError(res, error);
+        });
+    }
+
+    cancelOrder(req: Request, res: Response) {
+        const orderId = req.params.orderId;
+        return this.orderService.cancelOrder(orderId).subscribe(result => {
             return ResponseUtil.responseSuccess(res, result);
         }, error => {
             return ResponseUtil.responseError(res, error);

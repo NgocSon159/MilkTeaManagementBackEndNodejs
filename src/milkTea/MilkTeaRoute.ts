@@ -28,13 +28,15 @@ export class MilkTeaRoute {
             .post(this.orderController.search.bind(this.orderController));
         app.route(parentPathNameOrder + '/:id')
             .get(this.orderController.getByOrderId.bind(this.orderController));
-        app.route(parentPathNameOrder + '/user/barista')
+        app.route(parentPathNameOrder + '/user/barista') // For only barista
             .get(this.orderController.getOrderOfBarista.bind(this.orderController));
-        app.route(parentPathNameOrder + '/user/barista/:orderId/:userName') // UserName is who make this order // Return True - False
+        app.route(parentPathNameOrder + '/user/barista/:orderId/:userName') // UserName is who make this order // Return True - False // For only barista
             .get(this.orderController.updateToServered.bind(this.orderController));
         app.route(parentPathNameOrder + '/user/cashier')
             .get(this.orderController.getOrderOfCashier.bind(this.orderController));
-        app.route(parentPathNameOrder + '/user/cashier/payment/:orderId')
+        app.route(parentPathNameOrder + '/user/cashier/payment/:orderId') // to make payment for order
             .put(this.orderController.updateToCompleted.bind(this.orderController));
+        app.route(parentPathNameOrder + '/user/cashier/cancel/:orderId') // to cancel order
+            .get(this.orderController.cancelOrder.bind(this.orderController));
     }
 }

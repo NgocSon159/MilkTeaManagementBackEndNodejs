@@ -1,23 +1,25 @@
 import {Food} from './Food'
 import {FoodOfOrder} from "./FoodOfOrder";
+
 export class Order {
-    id?:         string;
-    orderID?:     string;
-    createdOn?:   Date;
-    createdBy?:   string;
-    servedOn?:  Date;
-    servedBy?:  string;
+    id?: string;
+    orderID?: string;
+    tableId?: string;
+    createdOn?: Date;
+    createdBy?: string;
+    servedOn?: Date;
+    servedBy?: string;
     completedOn?: Date;
     completedBy?: string;
-    timeDone?:    number;
+    timeDone?: number;
     phoneNumber?: string;
-    discount?:    number;
-    total?:       number;
-    cash?:        number;
-    change?:      number;
+    discount?: number;
+    total?: number;
+    cash?: number;
+    change?: number;
     statusOrder?: string;
-    status?:      boolean;
-    foods?:       FoodOfOrder[];
+    status?: boolean;
+    foods?: FoodOfOrder[];
 }
 
 export const orderCollectionName = "Orders";

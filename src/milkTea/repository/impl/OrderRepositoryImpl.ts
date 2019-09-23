@@ -83,7 +83,7 @@ export class OrderRepositoryImpl implements OrderRepository {
                     statusOrder: OrderStatusEnum.Served
                 };
                 return MongoUtil.rxUpdate(this.db.collection(orderCollectionName), query, objUpdate).pipe(flatMap((obj1) => {
-                    if (obj1 instanceof MongoError) {
+                    if (obj1 instanceof MongoError || obj1 === null) {
                         return of(false);
                     } else {
                         return of(true);
@@ -97,6 +97,23 @@ export class OrderRepositoryImpl implements OrderRepository {
         const query = {
             orderID: orderId
         };
+        object.statusOrder = OrderStatusEnum.Completed;
         return MongoUtil.rxUpdate(this.db.collection(orderCollectionName), query, object);
+    }
+
+    cancelOrder(orderId: string): Observable<boolean> {
+        const query = {
+            orderID: orderId
+        };
+        const obj: Order = {
+            statusOrder: OrderStatusEnum.Canceled
+        };
+        return MongoUtil.rxUpdate(this.db.collection(orderCollectionName), query, obj).pipe(flatMap((obj) => {
+            if (obj instanceof MongoError || obj === null) {
+                return of(false);
+            } else {
+                return of(true);
+            }
+        }));
     }
 }
