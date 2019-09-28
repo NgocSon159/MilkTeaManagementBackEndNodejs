@@ -1,62 +1,62 @@
 [
     {
         "tableId": 1,
-        "listOrderId": "",
+        "orderId": "",
         "statusTable": "Empty"
     },
     {
         "tableId": 2,
-        "listOrderId": "",
+        "orderId": "",
         "statusTable": "Empty"
     },
     {
         "tableId": 3,
-        "listOrderId": "",
+        "orderId": "",
         "statusTable": "Empty"
     },
     {
         "tableId": 4,
-        "listOrderId": "",
+        "orderId": "",
         "statusTable": "Empty"
     },
     {
         "tableId": 5,
-        "listOrderId": "",
+        "orderId": "",
         "statusTable": "Empty"
     },
     {
         "tableId": 6,
-        "listOrderId": "",
+        "orderId": "",
         "statusTable": "Empty"
     },
     {
         "tableId": 7,
-        "listOrderId": "",
+        "orderId": "",
         "statusTable": "Empty"
     },
     {
         "tableId": 8,
-        "listOrderId": "",
+        "orderId": "",
         "statusTable": "Empty"
     },
     {
         "tableId": 9,
-        "listOrderId": "",
+        "orderId": "",
         "statusTable": "Empty"
     },
     {
         "tableId": 10,
-        "listOrderId": "",
+        "orderId": "",
         "statusTable": "Empty"
     },
     {
         "tableId": 11,
-        "listOrderId": "",
+        "orderId": "",
         "statusTable": "Empty"
     },
     {
         "tableId": 12,
-        "listOrderId": "",
+        "orderId": "",
         "statusTable": "Empty"
     }
 ]

@@ -1,7 +1,7 @@
 [
   {
-    "orderID": "OD00001",
-    "branchID": "BR001",
+    "orderId": "OD00001",
+    "branchId": "BR001",
     "createdOn": {
       "$date": "2017-02-08T12:10:40Z"
     },
@@ -53,8 +53,8 @@
     ]
   },
   {
-    "orderID": "OD00002",
-    "branchID": "BR001",
+    "orderId": "OD00002",
+    "branchId": "BR001",
     "createdOn": {
       "$date": "2019-04-05T10:01:00Z"
     },
@@ -101,8 +101,8 @@
     ]
   },
   {
-    "orderID": "OD00003",
-    "branchID": "BR001",
+    "orderId": "OD00003",
+    "branchId": "BR001",
     "createdOn": {
       "$date": "2019-04-06T10:02:00Z"
     },
@@ -138,8 +138,8 @@
     ]
   },
   {
-    "orderID": "OD00004",
-    "branchID": "BR001",
+    "orderId": "OD00004",
+    "branchId": "BR001",
     "createdOn": {
       "$date": "2019-04-07T10:01:00Z"
     },
@@ -171,8 +171,8 @@
     ]
   },
   {
-    "orderID": "OD00005",
-    "branchID": "BR001",
+    "orderId": "OD00005",
+    "branchId": "BR001",
     "createdOn": {
       "$date": "2019-04-07T11:00:00Z"
     },
@@ -206,8 +206,8 @@
     ]
   },
   {
-    "orderID": "OD00006",
-    "branchID": "BR001",
+    "orderId": "OD00006",
+    "branchId": "BR001",
     "createdOn": {
       "$date": "2019-04-07T12:01:00Z"
     },
@@ -243,8 +243,8 @@
     ]
   },
   {
-    "orderID": "OD00007",
-    "branchID": "BR001",
+    "orderId": "OD00007",
+    "branchId": "BR001",
     "createdOn": {
       "$date": "2019-04-07T13:01:00Z"
     },
@@ -280,8 +280,8 @@
     ]
   },
   {
-    "orderID": "OD00008",
-    "branchID": "BR001",
+    "orderId": "OD00008",
+    "branchId": "BR001",
     "createdOn": {
       "$date": "2019-04-08T13:01:00Z"
     },
@@ -317,8 +317,8 @@
     ]
   },
   {
-    "orderID": "OD00009",
-    "branchID": "BR001",
+    "orderId": "OD00009",
+    "branchId": "BR001",
     "createdOn": {
       "$date": "2019-04-08T14:01:00Z"
     },
@@ -356,8 +356,8 @@
     ]
   },
   {
-    "orderID": "OD00010",
-    "branchID": "BR001",
+    "orderId": "OD00010",
+    "branchId": "BR001",
     "createdOn": {
       "$date": "2019-04-08T14:10:00Z"
     },
