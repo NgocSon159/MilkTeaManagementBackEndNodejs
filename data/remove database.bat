@@ -1,0 +1,1 @@
+mongo MilkTea --eval "db.dropDatabase()"

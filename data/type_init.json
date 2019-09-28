@@ -1,0 +1,12 @@
+[
+    {
+        "typeId": "FOO",
+        "typeName": "Food",
+        "status": true
+    },
+    {
+        "typeId": "DRK",
+        "typeName": "Drink",
+        "status": true
+    }
+]

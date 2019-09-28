@@ -14,6 +14,7 @@
       "$date": "2017-02-08T12:25:40Z"
     },
     "completedBy": "namanh",
+    "tableId": 1,
     "timeDone": 300,
     "phoneNumber": "",
     "discount": 0,
@@ -30,7 +31,11 @@
         "price": 59000,
         "quantity": 1,
         "sum": 59000,
-        "note": ["It nuoc", "Nhieu da"]
+        "note": [
+          "It nuoc",
+          "Nhieu da"
+        ],
+        "statusFood": "Finished"
       },
       {
         "foodID": "FO002",
@@ -39,7 +44,11 @@
         "price": 59000,
         "quantity": 1,
         "sum": 59000,
-        "note": ["50% muoi", "25% knorr"]
+        "note": [
+          "50% muoi",
+          "25% knorr"
+        ],
+        "statusFood": "Finished"
       }
     ]
   },
@@ -58,6 +67,7 @@
       "$date": "2019-04-05T10:16:00Z"
     },
     "completedBy": "namanh",
+    "tableId": 2,
     "timeDone": 300,
     "phoneNumber": "",
     "discount": 0,
@@ -74,7 +84,8 @@
         "price": 59000,
         "quantity": 1,
         "sum": 59000,
-        "note": []
+        "note": [],
+        "statusFood": "Finished"
       },
       {
         "orderID": "OD00002",
@@ -84,7 +95,8 @@
         "price": 59000,
         "quantity": 1,
         "sum": 59000,
-        "note": []
+        "note": [],
+        "statusFood": "Finished"
       }
     ]
   },
@@ -103,6 +115,7 @@
       "$date": "2019-04-06T10:17:00Z"
     },
     "completedBy": "namanh",
+    "tableId": 1,
     "timeDone": 300,
     "phoneNumber": "",
     "discount": 0,
@@ -119,7 +132,8 @@
         "price": 59000,
         "quantity": 1,
         "sum": 59000,
-        "note": []
+        "note": [],
+        "statusFood": "Finished"
       }
     ]
   },
@@ -134,6 +148,7 @@
     "servedBy": "",
     "completedOn": "",
     "completedBy": "",
+    "tableId": 1,
     "timeDone": "",
     "phoneNumber": "",
     "discount": 0,
@@ -150,7 +165,8 @@
         "price": 59000,
         "quantity": 1,
         "sum": 59000,
-        "note": []
+        "note": [],
+        "statusFood": "Finished"
       }
     ]
   },
@@ -167,6 +183,7 @@
       "$date": "2019-04-07T11:01:00Z"
     },
     "completedBy": "nhusang",
+    "tableId": 1,
     "timeDone": "",
     "phoneNumber": "",
     "discount": 0,
@@ -183,7 +200,8 @@
         "price": 59000,
         "quantity": 2,
         "sum": 118000,
-        "note": []
+        "note": [],
+        "statusFood": "Finished"
       }
     ]
   },
@@ -202,6 +220,7 @@
       "$date": "2019-04-07T12:10:00Z"
     },
     "completedBy": "nhusang",
+    "tableId": 1,
     "timeDone": 300,
     "phoneNumber": "",
     "discount": 0,
@@ -218,7 +237,8 @@
         "price": 45000,
         "quantity": 2,
         "sum": 90000,
-        "note": []
+        "note": [],
+        "statusFood": "Finished"
       }
     ]
   },
@@ -237,6 +257,7 @@
       "$date": "2019-04-07T13:18:00Z"
     },
     "completedBy": "duongtong",
+    "tableId": 1,
     "timeDone": 840,
     "phoneNumber": "",
     "discount": 0,
@@ -253,7 +274,8 @@
         "price": 59000,
         "quantity": 1,
         "sum": 59000,
-        "note": []
+        "note": [],
+        "statusFood": "Finished"
       }
     ]
   },
@@ -272,6 +294,7 @@
       "$date": "2019-04-08T15:00:00Z"
     },
     "completedBy": "boss",
+    "tableId": 1,
     "timeDone": 840,
     "phoneNumber": "",
     "discount": 0,
@@ -288,7 +311,8 @@
         "price": 59000,
         "quantity": 1,
         "sum": 59000,
-        "note": []
+        "note": [],
+        "statusFood": "Finished"
       }
     ]
   },
@@ -307,6 +331,7 @@
       "$date": "2019-04-08T15:01:00Z"
     },
     "completedBy": "boss",
+    "tableId": 1,
     "timeDone": 840,
     "phoneNumber": "",
     "discount": 0,
@@ -323,7 +348,10 @@
         "price": 65000,
         "quantity": 2,
         "sum": 130000,
-        "note": ["50% chua"]
+        "note": [
+          "50% chua"
+        ],
+        "statusFood": "Finished"
       }
     ]
   },
@@ -342,6 +370,7 @@
       "$date": "2019-04-08T15:02:00Z"
     },
     "completedBy": "boss",
+    "tableId": 1,
     "timeDone": 300,
     "phoneNumber": "",
     "discount": 0,
@@ -358,7 +387,8 @@
         "price": 59000,
         "quantity": 3,
         "sum": 177000,
-        "note": []
+        "note": [],
+        "statusFood": "Finished"
       }
     ]
   }

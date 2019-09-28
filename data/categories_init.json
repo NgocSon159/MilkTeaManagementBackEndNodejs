@@ -1,44 +1,50 @@
 [
     {
-        "categoryID": "CA001",
+        "categoryID": "DRK001",
         "name": "Ice Blended Coffee",
         "image": "https://i.ibb.co/zFpCHnR/Ice-Blended-Coffee.jpg",
         "createdOn": { "$date": "2019-03-28T13:55:17.171+00:00" },
+        "typeId": "DRK",
         "status": true
     },
     {
-        "categoryID": "CA002",
+        "categoryID": "DRK002",
         "name": "Chocolate",
         "image": "https://i.ibb.co/1L7WhtY/Chocolate.jpg",
         "createdOn": { "$date": "2019-03-28T13:55:17.171+00:00" },
+        "typeId": "DRK",
         "status": true
     },
     {
-        "categoryID": "CA003",
+        "categoryID": "DRK003",
         "name": "Mocktail & Smoothie",
         "image": "https://i.ibb.co/1nxH7KK/Mocktail-amp-Smoothie.jpg",
         "createdOn": { "$date": "2019-03-28T13:55:17.171+00:00" },
+        "typeId": "DRK",
         "status": true
     },
     {
-        "categoryID": "CA004",
+        "categoryID": "DRK004",
         "name": "Vietnamese Coffee",
         "image": "https://i.ibb.co/B395Q9G/Vietnamese-Coffee.jpg",
         "createdOn": { "$date": "2019-03-28T13:55:17.171+00:00" },
+        "typeId": "DRK",
         "status": true
     },
     {
-        "categoryID": "CA005",
+        "categoryID": "DRK005",
         "name": "Expresso",
         "image": "https://i.ibb.co/C9h0rpz/Expresso.jpg",
         "createdOn": { "$date": "2019-03-28T13:55:17.171+00:00" },
+        "typeId": "DRK",
         "status": true
     },
     {
-        "categoryID": "CA006",
+        "categoryID": "DRK006",
         "name": "Special Tea",
         "image": "https://i.ibb.co/HxNk0rc/Special-Tea.jpg",
         "createdOn": { "$date": "2019-03-28T13:55:17.171+00:00" },
+        "typeId": "DRK",
         "status": true
     }
 ]
