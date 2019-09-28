@@ -22,16 +22,24 @@ export class OrderServiceImpl implements OrderService{
         return this.orderRepository.getByOrderId(id);
     }
 
-    getOrderOfBarista(): Observable<Order[]> {
-        return this.orderRepository.getOrderOfBarista();
+    getFoodOfOrderBarista(): Observable<Order[]> {
+        return this.orderRepository.getFoodOfOrderBarista();
     }
 
     getOrderOfCashier(): Observable<Order[]> {
         return this.orderRepository.getOrderOfCashier();
     }
 
-    updateToServered(orderId: string, userName: string): Observable<boolean> {
-        return this.orderRepository.updateToServered(orderId, userName);
+    insert(obj: Order): Observable<Order> {
+        return this.orderRepository.insert(obj);
+    }
+
+    updateOrderToProcessing(order: Order, userName: string): Observable<Order> {
+        return this.orderRepository.updateOrderToProcessing(order, userName);
+    }
+
+    updateFoodFinished(order: Order, foodId: string): Observable<Order> {
+        return this.orderRepository.updateFoodFinished(order, foodId);
     }
 
     updateToCompleted(object: Order, orderId: string): Observable<Order> {

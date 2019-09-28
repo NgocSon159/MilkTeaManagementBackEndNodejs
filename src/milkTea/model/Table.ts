@@ -1,8 +1,8 @@
 export class Table {
     id?: string;
     tableId: number;
-    listOrderId: string[];
+    orderId: string;
     statusTable: string;
 }
 
-export const orderTableName = "Table";
+export const tableCollectionName = "Table";

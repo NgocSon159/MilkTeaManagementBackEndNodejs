@@ -3,7 +3,7 @@ import {FoodOfOrder} from "./FoodOfOrder";
 
 export class Order {
     id?: string;
-    orderID?: string;
+    orderId?: string;
     tableId?: string;
     createdOn?: Date;
     createdBy?: string;

@@ -7,9 +7,11 @@ export interface OrderService {
     getAll(): Observable<Order[]>;
     search(s: OrderSM): Observable<SearchResult<Order>>;
     getByOrderId(id: string): Observable<Order>;
-    getOrderOfBarista(): Observable<Order[]>;
+    getFoodOfOrderBarista(): Observable<Order[]>;
     getOrderOfCashier(): Observable<Order[]>;
-    updateToServered(orderId: string, userName: string): Observable<boolean>;
+    insert(obj: Order): Observable<Order>;
+    updateOrderToProcessing(order: Order, userName: string): Observable<Order>;
+    updateFoodFinished(order: Order, foodId: string): Observable<Order>;
     updateToCompleted(object: Order, orderId: string): Observable<Order>;
     cancelOrder(orderId: string): Observable<boolean>;
 }

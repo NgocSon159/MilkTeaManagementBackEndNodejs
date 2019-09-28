@@ -1,10 +1,10 @@
 export class Food {
-    foodID:   string;
+    foodId:   string;
     name:    string;
     price:     number;
     size:     string;
     createdOn:  Date;
-    categoryID: string;
+    categoryId: string;
     status:     boolean;
 }
 

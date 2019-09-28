@@ -1,11 +1,11 @@
 export class Food {
     id?: string;
-    foodID?:   string;
+    foodId?:   string;
     name?:    string;
     price?:     number;
     size?:     string;
     createdOn?:  Date;
-    categoryID?: string;
+    categoryId?: string;
     status?:     boolean;
 }
 

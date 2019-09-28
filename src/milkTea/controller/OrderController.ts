@@ -6,6 +6,7 @@ import {OrderService} from "../service/OrderService";
 import {Observable} from "rxjs";
 import {Order} from "../model/Order";
 import {OrderBuilder} from "../builder/OrderBuilder";
+import {OrderStatusEnum} from "../enum/OrderStatusEnum";
 
 export class OrderController {
     constructor(private orderService: OrderService) {
@@ -37,8 +38,8 @@ export class OrderController {
         });
     }
 
-    getOrderOfBarista(req: Request, res: Response) {
-        return this.orderService.getOrderOfBarista().subscribe(result => {
+    getFoodOfOrderBarista(req: Request, res: Response) {
+        return this.orderService.getFoodOfOrderBarista().subscribe(result => {
             return ResponseUtil.responseSuccess(res, result);
         }, error => {
             return ResponseUtil.responseError(res, error);
@@ -53,10 +54,31 @@ export class OrderController {
         });
     }
 
-    updateToServered(req: Request, res: Response) {
-        const orderId = req.params.orderId;
+    insert(req: Request, res: Response) {
+        const order = OrderBuilder.buildToOrder(req.body);
+        order.statusOrder = OrderStatusEnum.Ordered;
+        return this.orderService.insert(order).subscribe(result => {
+            return ResponseUtil.responseSuccess(res, result);
+        }, error => {
+            return ResponseUtil.responseError(res, error);
+        });
+    }
+
+    updateOrderToProcessing(req: Request, res: Response) {
+        const order = OrderBuilder.buildToOrder(req.body);
         const userName = req.params.userName;
-        return this.orderService.updateToServered(orderId, userName).subscribe(result => {
+        return this.orderService.updateOrderToProcessing(order, userName).subscribe(result => {
+            return ResponseUtil.responseSuccess(res, result);
+        }, error => {
+            return ResponseUtil.responseError(res, error);
+        });
+    }
+
+    updateFoodFinished(req: Request, res: Response) {
+        const order = OrderBuilder.buildToOrder(req.body);
+        const userName = req.params.userName;
+        const foodId = req.params.foodId;
+        return this.orderService.updateFoodFinished(order, foodId).subscribe(result => {
             return ResponseUtil.responseSuccess(res, result);
         }, error => {
             return ResponseUtil.responseError(res, error);

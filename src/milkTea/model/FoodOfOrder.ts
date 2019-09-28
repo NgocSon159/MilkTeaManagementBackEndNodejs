@@ -1,9 +1,10 @@
 export class FoodOfOrder {
-    FoodID?: string;
-    Name?: string;
-    Size?: string;
-    Price?: number;
-    Quantity?: number;
-    Sum?: number;
-    Note?: string[];
+    foodId?: string;
+    name?: string;
+    size?: string;
+    price?: number;
+    quantity?: number;
+    sum?: number;
+    note?: string[];
+    statusFood: string;
 }

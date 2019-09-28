@@ -2,10 +2,10 @@ import {SearchModel} from "../../common/search-model/searchModel";
 
 export class FoodSM extends SearchModel{
     id?: string;
-    foodID?:   string;
+    foodId?:   string;
     name?:    string;
     price?:     number;
     size?:     string;
-    categoryID?: string;
+    categoryId?: string;
     status?:     boolean;
 }
