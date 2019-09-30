@@ -9,7 +9,7 @@ import {Order, orderCollectionName} from "../../model/Order";
 import {OrderSM} from "../../search-Model/OrderSM";
 import {OrderStatusEnum} from "../../enum/OrderStatusEnum";
 import {DateUtil} from "../../../common/util/DateUtil";
-import {tableCollectionName} from "../../model/Table";
+import {Table, tableCollectionName} from "../../model/Table";
 import {TableEnum} from "../../enum/TableEnum";
 import {FoodStatusEnum} from "../../enum/FoodStatusEnum";
 
@@ -96,8 +96,8 @@ export class OrderRepositoryImpl implements OrderRepository {
         }
         obj.foods = foodArr;
         return MongoUtil.rxInsert(this.db.collection(orderCollectionName), obj).pipe(flatMap((obj1) => {
-            const updateTable = {
-                listOrderId: obj.orderId,
+            const updateTable: Table = {
+                orderId: obj.orderId,
                 statusTable: TableEnum.Full
             };
             return MongoUtil.rxUpdate(this.db.collection(tableCollectionName), {tableId: obj.tableId}, updateTable).pipe(flatMap((result1) => {
@@ -107,7 +107,7 @@ export class OrderRepositoryImpl implements OrderRepository {
         }));
     }
 
-    updateOrderToProcessing(order: Order, userName: string): Observable<Order> {
+    updateOrderProcessing(order: Order, userName: string): Observable<Order> {
         order.statusOrder = OrderStatusEnum.Processing;
         order.servedBy = userName;
         order.foods.map(item => {
@@ -131,7 +131,7 @@ export class OrderRepositoryImpl implements OrderRepository {
         if (this.checkFinishAllFood(order) === false) {
             order.statusOrder = OrderStatusEnum.Served;
             order.servedOn = DateUtil.createDateAsUTC(DateUtil.now());
-            order.timeDone = DateUtil.calculateSecond2Date(order.servedOn, order.createdOn)
+            order.timeDone = DateUtil.calculateSecond2Date(order.servedOn, order.createdOn);
         }
         return MongoUtil.rxUpdate(this.db.collection(orderCollectionName), {orderId: order.orderId}, order);
     }
@@ -146,31 +146,47 @@ export class OrderRepositoryImpl implements OrderRepository {
         return existFoodProcessing;
     }
 
-    updateToCompleted(object: Order, orderId: string): Observable<Order> {
+    updateOrderServed(order: Order): Observable<Order> {
+        order.foods.map(item => {
+            item.statusFood = FoodStatusEnum.Finished
+        });
+        order.statusOrder = OrderStatusEnum.Served;
+        order.servedOn = DateUtil.createDateAsUTC(DateUtil.now());
+        order.timeDone = DateUtil.calculateSecond2Date(order.servedOn, order.createdOn);
+        return MongoUtil.rxUpdate(this.db.collection(orderCollectionName), {orderId: order.orderId}, order);
+    }
+
+    updateOrderCompleted(object: Order, userName: string): Observable<Order> {
         const query = {
-            orderId: orderId
+            orderId: object.orderId
         };
         object.statusOrder = OrderStatusEnum.Completed;
+        object.completedBy = userName;
+        object.completedOn = DateUtil.createDateAsUTC(DateUtil.now());
         return MongoUtil.rxUpdate(this.db.collection(orderCollectionName), query, object).pipe(flatMap((obj) => {
-            return MongoUtil.rxFindOne(this.db.collection(tableCollectionName), {tableID: object.tableId}).pipe(flatMap((result) => {
-                return of({});
+            const updateTable = {
+                orderId: "",
+                statusTable: TableEnum.Empty
+            };
+            return MongoUtil.rxUpdate(this.db.collection(tableCollectionName), {tableId: object.tableId}, updateTable).pipe(flatMap((result) => {
+                return of(obj);
             }))
         }));
     }
 
-    cancelOrder(orderId: string): Observable<boolean> {
+    cancelOrder(order: Order): Observable<any> {
         const query = {
-            orderId: orderId
+            orderId: order.orderId
         };
-        const obj: Order = {
-            statusOrder: OrderStatusEnum.Canceled
-        };
-        return MongoUtil.rxUpdate(this.db.collection(orderCollectionName), query, obj).pipe(flatMap((obj) => {
-            if (obj instanceof MongoError || obj === null) {
-                return of(false);
-            } else {
-                return of(true);
-            }
+        order.statusOrder = OrderStatusEnum.Canceled;
+        return MongoUtil.rxUpdate(this.db.collection(orderCollectionName), query, order).pipe(flatMap((obj) => {
+            const updateTable = {
+                orderId: "",
+                statusTable: TableEnum.Empty
+            };
+            return MongoUtil.rxUpdate(this.db.collection(tableCollectionName), {tableId: order.tableId}, updateTable).pipe(flatMap((result) => {
+                return of(obj);
+            }))
         }));
     }
 }

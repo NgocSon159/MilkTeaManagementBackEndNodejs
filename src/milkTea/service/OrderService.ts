@@ -10,8 +10,9 @@ export interface OrderService {
     getFoodOfOrderBarista(): Observable<Order[]>;
     getOrderOfCashier(): Observable<Order[]>;
     insert(obj: Order): Observable<Order>;
-    updateOrderToProcessing(order: Order, userName: string): Observable<Order>;
+    updateOrderProcessing(order: Order, userName: string): Observable<Order>;
     updateFoodFinished(order: Order, foodId: string): Observable<Order>;
-    updateToCompleted(object: Order, orderId: string): Observable<Order>;
-    cancelOrder(orderId: string): Observable<boolean>;
+    updateOrderServed(order: Order): Observable<Order>;
+    updateOrderCompleted(object: Order, userName: string): Observable<Order>;
+    cancelOrder(order: Order): Observable<Order>;
 }

@@ -36,21 +36,23 @@ export class MilkTeaRoute {
         app.route(parentPathNameOrder + '/user/barista')
             .get(this.orderController.getFoodOfOrderBarista.bind(this.orderController));
         app.route(parentPathNameOrder + '/user/barista/process/:userName') // UserName is who make this ordeR
-            .post(this.orderController.updateOrderToProcessing.bind(this.orderController)); // Post object Order.
+            .put(this.orderController.updateOrderToProcessing.bind(this.orderController)); // Put object Order.
         app.route(parentPathNameOrder + '/user/barista/processFood/:foodId') // foodId is food was finished
-            .post(this.orderController.updateFoodFinished.bind(this.orderController)); // Post object Order.
+            .put(this.orderController.updateFoodFinished.bind(this.orderController)); // Put object Order.
+        app.route(parentPathNameOrder + '/user/barista/serveOrder') // server 1 order.
+            .put(this.orderController.updateOrderServed.bind(this.orderController)); // Put object Order.
 
         // For Waiter
         app.route(parentPathNameOrder) // Create new Order.
             .post(this.orderController.insert.bind(this.orderController));
+        app.route(parentPathNameOrder + '/cancelOrder') // to cancel order
+            .put(this.orderController.cancelOrder.bind(this.orderController));
 
         // For Cashier
         app.route(parentPathNameOrder + '/user/cashier')
             .get(this.orderController.getOrderOfCashier.bind(this.orderController));
-        app.route(parentPathNameOrder + '/user/cashier/payment/:orderId') // to make payment for order
-            .put(this.orderController.updateToCompleted.bind(this.orderController));
-        app.route(parentPathNameOrder + '/user/cashier/cancel/:orderId') // to cancel order
-            .get(this.orderController.cancelOrder.bind(this.orderController));
+        app.route(parentPathNameOrder + '/user/cashier/payment/:userName') // to make payment for order
+            .put(this.orderController.updateOrderCompleted.bind(this.orderController));
 
         // Table
         const parentPathNameTable = '/table';

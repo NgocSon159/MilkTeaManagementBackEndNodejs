@@ -67,7 +67,7 @@ export class OrderController {
     updateOrderToProcessing(req: Request, res: Response) {
         const order = OrderBuilder.buildToOrder(req.body);
         const userName = req.params.userName;
-        return this.orderService.updateOrderToProcessing(order, userName).subscribe(result => {
+        return this.orderService.updateOrderProcessing(order, userName).subscribe(result => {
             return ResponseUtil.responseSuccess(res, result);
         }, error => {
             return ResponseUtil.responseError(res, error);
@@ -85,10 +85,19 @@ export class OrderController {
         });
     }
 
-    updateToCompleted(req: Request, res: Response) {
-        const orderId = req.params.orderId;
+    updateOrderServed(req: Request, res: Response) {
         const order = OrderBuilder.buildToOrder(req.body);
-        return this.orderService.updateToCompleted(order, orderId).subscribe(result => {
+        return this.orderService.updateOrderServed(order).subscribe(result => {
+            return ResponseUtil.responseSuccess(res, result);
+        }, error => {
+            return ResponseUtil.responseError(res, error);
+        });
+    }
+
+    updateOrderCompleted(req: Request, res: Response) {
+        const userName = req.params.userName;
+        const order = OrderBuilder.buildToOrder(req.body);
+        return this.orderService.updateOrderCompleted(order, userName).subscribe(result => {
             return ResponseUtil.responseSuccess(res, result);
         }, error => {
             return ResponseUtil.responseError(res, error);
@@ -96,8 +105,8 @@ export class OrderController {
     }
 
     cancelOrder(req: Request, res: Response) {
-        const orderId = req.params.orderId;
-        return this.orderService.cancelOrder(orderId).subscribe(result => {
+        const order = OrderBuilder.buildToOrder(req.body);
+        return this.orderService.cancelOrder(order).subscribe(result => {
             return ResponseUtil.responseSuccess(res, result);
         }, error => {
             return ResponseUtil.responseError(res, error);

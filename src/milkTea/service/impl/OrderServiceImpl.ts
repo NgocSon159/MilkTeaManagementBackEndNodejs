@@ -34,19 +34,23 @@ export class OrderServiceImpl implements OrderService{
         return this.orderRepository.insert(obj);
     }
 
-    updateOrderToProcessing(order: Order, userName: string): Observable<Order> {
-        return this.orderRepository.updateOrderToProcessing(order, userName);
+    updateOrderProcessing(order: Order, userName: string): Observable<Order> {
+        return this.orderRepository.updateOrderProcessing(order, userName);
     }
 
     updateFoodFinished(order: Order, foodId: string): Observable<Order> {
         return this.orderRepository.updateFoodFinished(order, foodId);
     }
 
-    updateToCompleted(object: Order, orderId: string): Observable<Order> {
-        return this.orderRepository.updateToCompleted(object, orderId);
+    updateOrderServed(order: Order): Observable<Order> {
+        return this.orderRepository.updateOrderServed(order);
     }
 
-    cancelOrder(orderId: string): Observable<boolean> {
-        return this.orderRepository.cancelOrder(orderId);
+    updateOrderCompleted(object: Order, userName: string): Observable<Order> {
+        return this.orderRepository.updateOrderCompleted(object, userName);
+    }
+
+    cancelOrder(order: Order): Observable<Order> {
+        return this.orderRepository.cancelOrder(order);
     }
 }
