@@ -1,0 +1,37 @@
+[
+    {
+        "branchId": "BR001",
+        "name": "The Alley 01",
+        "address": "114 Hồ Tùng Mậu, Q.1, TP.HCM",
+        "phoneNumber": "0123456789",
+        "status": true
+    },
+    {
+        "branchId": "BR002",
+        "name": "The Alley 02",
+        "address": "321 Phan Văn Trị, Q.Bình Thạnh, TP.HCM",
+        "phoneNumber": "0624816324",
+        "status": true
+    },
+    {
+        "branchId": "BR003",
+        "name": "The Alley 03",
+        "address": "1A Nguyễn Thị Minh Khai, Q.3, TP.HCM",
+        "phoneNumber": "0123456789",
+        "status": true
+    },
+    {
+        "branchId": "BR004",
+        "name": "The Alley 04",
+        "address": "106 Nguyễn Trãi, Q.5, TP.HCM",
+        "phoneNumber": "0123456789",
+        "status": true
+    },
+    {
+        "branchId": "BR005",
+        "name": "The Alley 05",
+        "address": "361 Cách Mạng Tháng 8, Q.Tân Bình, TP.HCM",
+        "phoneNumber": "0123456789",
+        "status": true
+    }
+]

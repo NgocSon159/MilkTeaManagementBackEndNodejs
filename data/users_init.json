@@ -1,0 +1,37 @@
+[
+    {
+        "userName": "admin",
+        "hashPassword": { "$binary":"JDJhJDEwJHQ3d1J4dHRLTXZhNVVnM3VUR2NuNmVneDkyMzRLYm5UaGZ4WFdjZ25Eb2ZOU2tSQnhpV3J1","$type":"00"},
+        "employeeId": "",
+        "roleId":"RAdmin",
+        "status": true
+    },
+    {
+        "userName": "ngocson",
+        "hashPassword": { "$binary":"JDJhJDEwJHQ3d1J4dHRLTXZhNVVnM3VUR2NuNmVneDkyMzRLYm5UaGZ4WFdjZ25Eb2ZOU2tSQnhpV3J1","$type":"00"},
+        "employeeId": "NV001",
+        "roleId":"RWaiter",
+        "status": true
+    },
+    {
+        "userName": "thithao",
+        "hashPassword": { "$binary":"JDJhJDEwJHQ3d1J4dHRLTXZhNVVnM3VUR2NuNmVneDkyMzRLYm5UaGZ4WFdjZ25Eb2ZOU2tSQnhpV3J1","$type":"00"},
+        "employeeId": "NV002",
+        "roleId":"RCashier",
+        "status": true
+    },
+    {
+        "userName": "minhtri",
+        "hashPassword": { "$binary":"JDJhJDEwJHQ3d1J4dHRLTXZhNVVnM3VUR2NuNmVneDkyMzRLYm5UaGZ4WFdjZ25Eb2ZOU2tSQnhpV3J1","$type":"00"},
+        "employeeId": "NV003",
+        "roleId":"RWaiter",
+        "status": true
+    },
+    {
+        "userName": "quocvinh",
+        "hashPassword": { "$binary":"JDJhJDEwJHQ3d1J4dHRLTXZhNVVnM3VUR2NuNmVneDkyMzRLYm5UaGZ4WFdjZ25Eb2ZOU2tSQnhpV3J1","$type":"00"},
+        "employeeId": "NV004",
+        "roleId":"RBarista",
+        "status": true
+    }
+]

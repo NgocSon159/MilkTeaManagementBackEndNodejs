@@ -29,8 +29,8 @@ export class App {
             this.setupRoute(db);
         }, error => {
             console.log('Error Mongo: ', error);
-        });
-    }
+        });}
+
 
     protected config(): void {
         this.app.use(bodyParser.json());

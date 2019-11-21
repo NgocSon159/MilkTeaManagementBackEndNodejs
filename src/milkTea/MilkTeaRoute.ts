@@ -2,20 +2,28 @@ import {FoodController} from "./controller/FoodController";
 import {ApplicationContext} from "./config/ApplicationContext";
 import {OrderController} from "./controller/OrderController";
 import {TableController} from "./controller/TableController";
+import {UserController} from "./controller/UserController";
 
 export class MilkTeaRoute {
     foodController: FoodController;
     orderController: OrderController;
     tableController: TableController;
+    userController: UserController;
 
     constructor(mongo) {
         const applicationContext = new ApplicationContext(mongo);
         this.foodController = applicationContext.controllerFood;
         this.orderController = applicationContext.controllerOrder;
         this.tableController = applicationContext.controllerTable;
+        this.userController = applicationContext.controllerUser;
     }
 
     routes(app) {
+        // Login
+        const parentPathNameLogin = '/login';
+        app.route(parentPathNameLogin)
+            .post(this.userController.login.bind(this.userController));
+
         // Food
         const parentPathNameFood = '/food';
         app.route(parentPathNameFood)
@@ -29,7 +37,7 @@ export class MilkTeaRoute {
             .get(this.orderController.getAll.bind(this.orderController));
         app.route(parentPathNameOrder + '/search')
             .post(this.orderController.search.bind(this.orderController));
-        app.route(parentPathNameOrder + '/:id')
+        app.route(parentPathNameOrder + '/:id/:name')
             .get(this.orderController.getByOrderId.bind(this.orderController));
 
         // For Barista

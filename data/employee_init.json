@@ -1,0 +1,54 @@
+[
+        {
+            "employeeId": "NV001",
+            "name": "Nguyễn Ngọc Sơn",
+            "birthday": { "$date": "1998-10-08T00:00:00Z"},
+            "phoneNumber": "0123654987",
+            "identity": "025123456",
+            "address": "19/1b Lê Lợi Street, Hóc Môn Town, HCM City",
+            "email": "son@gmail.com",
+            "dateStart": { "$date": "2019-04-01T00:00:00Z" },
+            "dateEnd": { "$date": "2020-04-01T00:00:00Z" },
+            "branchId": "BR001",
+            "status": true
+        },
+        {
+            "employeeId": "NV002",
+            "name": "Nguyễn Thị Thảo",
+            "birthday": { "$date": "1996-10-08T00:00:00Z"},
+            "phoneNumber": "0456789123",
+            "identity": "025123456",
+            "address": "19 Nguyễn Trãi Street, 1 District, HCM City",
+            "email": "thao@gmail.com",
+            "dateStart": { "$date": "2019-04-01T00:00:00Z" },
+            "dateEnd": { "$date": "2020-04-01T00:00:00Z" },
+            "branchId": "BR001",
+            "status": true
+        },
+        {
+            "employeeId": "NV003",
+            "name": "Nguyễn Minh Trí",
+            "birthday": { "$date": "1998-01-01T00:00:00Z"},
+            "phoneNumber": "0321456987",
+            "identity": "025123456",
+            "address": "20 Phan Đình Phùng Street, Phú Nhuận District, HCM City",
+            "email": "tri@gmail.com",
+            "dateStart": { "$date": "2019-04-01T00:00:00Z" },
+            "dateEnd": { "$date": "2020-04-01T00:00:00Z" },
+            "branchId": "BR001",
+            "status": true
+        },
+        {
+            "employeeId": "NV004",
+            "name": "Nguyễn Quốc Vinh",
+            "birthday": { "$date": "1998-02-02T00:00:00Z"},
+            "phoneNumber": "0147258369",
+            "identity": "025123456",
+            "address": "15 Ngô Gia Tự, 5 District, HCM City",
+            "email": "vinh@gmail.com",
+            "dateStart": { "$date": "2019-04-01T00:00:00Z" },
+            "dateEnd": { "$date": "2020-04-01T00:00:00Z" },
+            "branchId": "BR001",
+            "status": true
+        }
+    ]
