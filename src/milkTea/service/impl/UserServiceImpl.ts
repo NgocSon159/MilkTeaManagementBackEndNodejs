@@ -10,4 +10,8 @@ export class UserServiceImpl implements UserService{
     login(user: User): Observable<any> {
         return this.userRepository.login(user);
     }
+
+    loginToken(token: string): Observable<any> {
+        return this.userRepository.loginToken(token);
+    }
 }

@@ -16,7 +16,7 @@ export class UserRepositoryImpl implements UserRepository{
 
     login(user: User): Observable<any> {
         // const salt = bcrypt.genSaltSync(10);
-        // const hash = bcrypt.hashSync(user.hashPassword, salt);
+        // const hash = bcrypt.hashSync("123456", salt);
         // $2b$10$zvtOmAQ5tQTVh.5qlnqXVOW5lqbx4s.eIBTbO5ztQ9lJNm90lw6Ei
         const query = {
             userName: user.userName,
@@ -39,5 +39,18 @@ export class UserRepositoryImpl implements UserRepository{
                 return of("Incorrect username or password");
             }
         }))
+    }
+    loginToken(token: string): Observable<any> {
+        // const decoded = jwt.verify(token, config.SECRET_KEY);
+        let response;
+        jwt.verify(token, config.SECRET_KEY, function(err, decoded) {
+            if(err) {
+                response = err;
+            } else {
+                response = decoded;
+            }
+        });
+        return of("");
+
     }
 }

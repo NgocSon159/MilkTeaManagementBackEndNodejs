@@ -3,4 +3,5 @@ import {Observable} from "rxjs";
 
 export interface UserRepository {
     login(user: User): Observable<any>;
+    loginToken(token: string): Observable<any>;
 }
