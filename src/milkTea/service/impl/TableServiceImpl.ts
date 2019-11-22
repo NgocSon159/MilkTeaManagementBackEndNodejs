@@ -20,4 +20,7 @@ export class TableServiceImpl implements TableService{
     search(s: TableSM): Observable<SearchResult<Table>> {
         return this.tableRepository.search(s);
     }
+    getTableFull(): Observable<Table[]> {
+        return this.tableRepository.getTableFull();
+    }
 }

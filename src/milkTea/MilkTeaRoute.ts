@@ -22,7 +22,7 @@ export class MilkTeaRoute {
         // Login
         const parentPathNameLogin = '/login';
         app.route(parentPathNameLogin)
-            .post(this.userController.login.bind(this.userController));
+            .post(this.userController.login.bind(this.userController)); // userName, password (ko ma hoa)
 
         // Food
         const parentPathNameFood = '/food';
@@ -68,5 +68,7 @@ export class MilkTeaRoute {
             .get(this.tableController.getAll.bind(this.tableController));
         app.route(parentPathNameTable + '/search')
             .post(this.tableController.search.bind(this.tableController));
+        app.route(parentPathNameTable + "/full")
+            .get(this.tableController.getTableFull.bind(this.tableController));
     }
 }

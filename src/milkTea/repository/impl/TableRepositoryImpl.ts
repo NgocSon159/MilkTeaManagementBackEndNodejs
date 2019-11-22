@@ -33,7 +33,10 @@ export class TableRepositoryImpl implements TableRepository {
         }));
     }
 
-    update(obj: Table): Observable<Table> {
-        return MongoUtil.rxUpdate(this.db.collection(tableCollectionName), { tableId: obj.tableId}, obj);
+    getTableFull(): Observable<Table[]> {
+        const query = {
+            statusTable: "Full"
+        };
+        return MongoUtil.rxFind(this.db.collection(tableCollectionName), query);
     }
 }
