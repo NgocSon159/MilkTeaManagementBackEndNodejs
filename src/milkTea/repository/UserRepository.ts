@@ -2,6 +2,6 @@ import {User} from "../model/User";
 import {Observable} from "rxjs";
 
 export interface UserRepository {
-    login(user: User): Observable<any>;
+    login(user: any): Observable<any>;
     loginToken(token: string): Observable<any>;
 }
