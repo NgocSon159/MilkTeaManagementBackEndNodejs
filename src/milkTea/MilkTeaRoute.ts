@@ -22,7 +22,7 @@ export class MilkTeaRoute {
         // Login
         const parentPathNameLogin = '/login';
         app.route(parentPathNameLogin)
-            .post(this.userController.login.bind(this.userController)); // userName, password (ko ma hoa)
+            .post(this.userController.login.bind(this.userController)); // userName, password (ko ma hoa) or header have "token": "asdaqwxqdasxd"
 
         // Food
         const parentPathNameFood = '/food';

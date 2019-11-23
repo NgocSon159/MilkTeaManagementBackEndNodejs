@@ -27,7 +27,7 @@ export class UserRepositoryImpl implements UserRepository{
                 if(match){
                     const token = jwt.sign(result,
                         config.SECRET_KEY,
-                        { expiresIn: '30m'
+                        { expiresIn: '5m'
                         }
                     );
                     const response: ResponseInfo = {
@@ -46,16 +46,26 @@ export class UserRepositoryImpl implements UserRepository{
         }))
     }
     loginToken(token: string): Observable<any> {
-        // const decoded = jwt.verify(token, config.SECRET_KEY);
         let response;
         jwt.verify(token, config.SECRET_KEY, function(err, decoded) {
             if(err) {
                 response = err;
-            } else {
-                response = decoded;
+            } else { // Refresh token (create new token)
+                delete decoded['exp'];
+                delete decoded['iat'];
+                const token = jwt.sign(decoded,
+                    config.SECRET_KEY,
+                    { expiresIn: '5m'
+                    }
+                );
+                const response1: ResponseInfo = {
+                    roleId: decoded["roleId"], token: token, userName: decoded.userName
+                };
+
+                response = response1;
             }
         });
-        return of("");
+        return of(response);
 
     }
 }
