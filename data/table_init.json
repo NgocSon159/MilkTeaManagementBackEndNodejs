@@ -7,7 +7,7 @@
     {
         "tableId": 2,
         "orderId": "",
-        "statusTable": "Empty"
+        "statusTable": "Full"
     },
     {
         "tableId": 3,
@@ -17,7 +17,7 @@
     {
         "tableId": 4,
         "orderId": "",
-        "statusTable": "Empty"
+        "statusTable": "Full"
     },
     {
         "tableId": 5,
@@ -56,6 +56,21 @@
     },
     {
         "tableId": 12,
+        "orderId": "",
+        "statusTable": "Empty"
+    },
+	{
+        "tableId": 13,
+        "orderId": "",
+        "statusTable": "Empty"
+    },
+	{
+        "tableId": 14,
+        "orderId": "",
+        "statusTable": "Empty"
+    },
+	{
+        "tableId": 15,
         "orderId": "",
         "statusTable": "Empty"
     }

@@ -15,9 +15,18 @@ export class TableController {
             return ResponseUtil.responseError(res, error);
         });
     }
+
     search(req: Request, res: Response) {
         const s = SearchModelBuilder.buildSearchModel(req.body);
         return this.tableService.search(s).subscribe(result => {
+            return ResponseUtil.responseSuccess(res, result);
+        }, error => {
+            return ResponseUtil.responseError(res, error);
+        });
+    }
+
+    getTableFull(req: Request, res: Response) {
+        return this.tableService.getTableFull().subscribe(result => {
             return ResponseUtil.responseSuccess(res, result);
         }, error => {
             return ResponseUtil.responseError(res, error);

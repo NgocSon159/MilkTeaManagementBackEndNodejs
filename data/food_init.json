@@ -416,7 +416,7 @@
         "size": "Small",
         "createdOn": { "$date": "2019-04-01T17:21:17.171+00:00" },
         "categoryId": "DRK005",
-		"image":"",
+		"image":"https://i.ibb.co/T4GPS2W/Caramel-Macchiato.jpg",
         "status": true
     },
     {

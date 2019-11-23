@@ -7,7 +7,7 @@ export class UserServiceImpl implements UserService{
     constructor(private userRepository: UserRepository) {
 
     }
-    login(user: User): Observable<any> {
+    login(user: any): Observable<any> {
         return this.userRepository.login(user);
     }
 

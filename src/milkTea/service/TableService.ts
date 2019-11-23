@@ -6,4 +6,5 @@ import {TableSM} from "../search-Model/TableSM";
 export interface TableService {
     getAll(): Observable<Table[]>;
     search(s: TableSM): Observable<SearchResult<Table>>;
+    getTableFull(): Observable<Table[]>;
 }

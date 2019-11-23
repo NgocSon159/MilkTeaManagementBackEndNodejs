@@ -1,8 +1,8 @@
-import {OrderService} from "../service/OrderService";
 import {Request, Response} from "express";
 import {ResponseUtil} from "../../common/util/ResponseUtil";
 import {User} from "../model/User";
 import {UserService} from "../service/UserService";
+import * as jwt from "jsonwebtoken";
 
 export class UserController {
     constructor(private userService: UserService) {
@@ -12,8 +12,7 @@ export class UserController {
         const token = req.header("token");
         if(token) {
             return this.userService.loginToken(token).subscribe(result => {
-                const a = result.toString();
-                if (a.indexOf("Incorrect") > -1) {
+                if (result instanceof jwt.JsonWebTokenError) {
                     return ResponseUtil.responseError(res, result);
                 } else {
                     return ResponseUtil.responseSuccess(res, result);
