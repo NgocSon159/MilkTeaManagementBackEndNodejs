@@ -11,6 +11,7 @@ import {TableRepository} from "../TableRepository";
 import {tableCollectionName, Table} from "../../model/Table";
 import {TableSM} from "../../search-Model/TableSM";
 import {TableEnum} from "../../enum/TableEnum";
+import {Order, orderCollectionName} from "../../model/Order";
 
 export class TableRepositoryImpl implements TableRepository {
     constructor(private db: Db) {
@@ -44,10 +45,19 @@ export class TableRepositoryImpl implements TableRepository {
         }))
     }
 
-    getTableFull(): Observable<Table[]> {
+    getTablePayment(): Observable<Table[]> {
         const query = {
-            statusTable: "Full"
+            statusTable: "Payment"
         };
         return MongoUtil.rxFind(this.db.collection(tableCollectionName), query);
+    }
+
+    getOrderFromTable(tableId: number): Observable<Order> {
+        const query = {
+            tableId: tableId
+        };
+        return MongoUtil.rxFindOne<Table>(this.db.collection(tableCollectionName), query).pipe(flatMap((result) => {
+            return MongoUtil.rxFindOne(this.db.collection(orderCollectionName), {orderId: result.orderId});
+        }))
     }
 }

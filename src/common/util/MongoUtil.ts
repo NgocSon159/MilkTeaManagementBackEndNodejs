@@ -79,7 +79,7 @@ export class MongoUtil {
 
     public static rxInsert<T>(collection: Collection, object: any): Observable<T> {
         return fromPromise(new Promise<T>(((resolve, reject) => {
-            collection.insertOne(object, (err, result: InsertOneWriteOpResult<T>) => {
+            collection.insertOne(object, (err, result: InsertOneWriteOpResult) => {
                 if (err) {
                     return reject(err);
                 }

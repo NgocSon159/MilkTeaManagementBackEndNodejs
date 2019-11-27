@@ -62,7 +62,7 @@ export class OrderRepositoryImpl implements OrderRepository {
             listOrder.map(item => {
                 let listFood = item.foods;
                 listFood = listFood.filter(item1 => {
-                    if (item1.statusFood === FoodStatusEnum.Ordered) {
+                    if (item1.statusFood === FoodStatusEnum.Ordered || item1.statusFood === FoodStatusEnum.Processing) {
                         return true;
                     } else return false;
                 });
@@ -116,6 +116,8 @@ export class OrderRepositoryImpl implements OrderRepository {
     }
 
     updateOrderProcessing(order: Order, userName: string): Observable<Order> {
+        delete order.id;
+        delete order["_id"];
         order.statusOrder = OrderStatusEnum.Processing;
         order.servedBy = userName;
         order.foods.map(item => {

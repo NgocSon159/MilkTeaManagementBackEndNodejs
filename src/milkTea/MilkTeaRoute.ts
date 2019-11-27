@@ -40,7 +40,7 @@ export class MilkTeaRoute {
             .get(this.orderController.getAll.bind(this.orderController));
         app.route(parentPathNameOrder + '/search')
             .post(this.orderController.search.bind(this.orderController));
-        app.route(parentPathNameOrder + '/:id/:name')
+        app.route(parentPathNameOrder + '/detail/:id/:name')
             .get(this.orderController.getByOrderId.bind(this.orderController));
 
         // For Barista
@@ -71,10 +71,12 @@ export class MilkTeaRoute {
             .get(this.tableController.getAll.bind(this.tableController));
         app.route(parentPathNameTable + '/search')
             .post(this.tableController.search.bind(this.tableController));
-        app.route(parentPathNameTable + "/full")
-            .get(this.tableController.getTableFull.bind(this.tableController));
+        app.route(parentPathNameTable + "/payment")
+            .get(this.tableController.getTablePayment.bind(this.tableController));
         app.route(parentPathNameTable + "/updatePayment/:tableId")
             .get(this.tableController.updateTablePayment.bind(this.tableController));
+        app.route(parentPathNameTable + "/getOrder/:tableId")
+            .get(this.tableController.getOrderFromTable.bind(this.tableController));
 
         const parentPathNameDiscount = '/discount';
         app.route(parentPathNameDiscount)

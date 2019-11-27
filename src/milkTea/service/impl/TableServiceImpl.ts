@@ -9,6 +9,7 @@ import {TableService} from "../TableService";
 import {Table} from "../../model/Table";
 import {TableSM} from "../../search-Model/TableSM";
 import {TableRepository} from "../../repository/TableRepository";
+import {Order} from "../../model/Order";
 
 export class TableServiceImpl implements TableService{
     constructor(private tableRepository: TableRepository) {
@@ -20,10 +21,14 @@ export class TableServiceImpl implements TableService{
     search(s: TableSM): Observable<SearchResult<Table>> {
         return this.tableRepository.search(s);
     }
-    getTableFull(): Observable<Table[]> {
-        return this.tableRepository.getTableFull();
+    getTablePayment(): Observable<Table[]> {
+        return this.tableRepository.getTablePayment();
     }
     updateTablePayment(tableId: number): Observable<Table> {
         return this.tableRepository.updateTablePayment(tableId);
+    }
+
+    getOrderFromTable(tableId: number): Observable<Order> {
+        return this.tableRepository.getOrderFromTable(tableId);
     }
 }
