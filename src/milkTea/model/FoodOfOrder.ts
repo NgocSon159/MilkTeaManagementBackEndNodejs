@@ -6,5 +6,7 @@ export class FoodOfOrder {
     quantity?: number;
     sum?: number;
     note?: string[];
+    icePercent?: string;
+    sugarPercent?: string;
     statusFood: string;
 }

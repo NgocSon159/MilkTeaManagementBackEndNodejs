@@ -10,6 +10,7 @@ import {flatMap} from "rxjs/operators";
 import {TableRepository} from "../TableRepository";
 import {tableCollectionName, Table} from "../../model/Table";
 import {TableSM} from "../../search-Model/TableSM";
+import {TableEnum} from "../../enum/TableEnum";
 
 export class TableRepositoryImpl implements TableRepository {
     constructor(private db: Db) {
@@ -31,6 +32,16 @@ export class TableRepositoryImpl implements TableRepository {
             searchResult.result = result1;
             return of(searchResult)
         }));
+    }
+
+    updateTablePayment(tableId: number): Observable<Table> {
+        const query = {
+            tableId: tableId
+        };
+        return MongoUtil.rxFindOne<Table>(this.db.collection(tableCollectionName), query).pipe(flatMap((result) => {
+            result.statusTable = TableEnum.Payment;
+            return MongoUtil.rxUpdate(this.db.collection(tableCollectionName), query, result);
+        }))
     }
 
     getTableFull(): Observable<Table[]> {

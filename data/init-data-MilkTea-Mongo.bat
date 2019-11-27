@@ -15,3 +15,5 @@ mongoimport --host localhost --db MilkTea --collection Employee --type json --fi
 mongoimport --host localhost --db MilkTea --collection Branch --type json --file ./branches_init.json --jsonArray --maintainInsertionOrder
 
 mongoimport --host localhost --db MilkTea --collection User --type json --file ./users_init.json --jsonArray --maintainInsertionOrder
+
+mongoimport --host localhost --db MilkTea --collection Discount --type json --file ./discount.json --jsonArray --maintainInsertionOrder

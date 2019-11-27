@@ -23,4 +23,7 @@ export class TableServiceImpl implements TableService{
     getTableFull(): Observable<Table[]> {
         return this.tableRepository.getTableFull();
     }
+    updateTablePayment(tableId: number): Observable<Table> {
+        return this.tableRepository.updateTablePayment(tableId);
+    }
 }

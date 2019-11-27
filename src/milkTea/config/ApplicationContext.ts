@@ -14,6 +14,10 @@ import {UserService} from "../service/UserService";
 import {UserController} from "../controller/UserController";
 import {UserRepositoryImpl} from "../repository/impl/UserRepositoryImpl";
 import {UserServiceImpl} from "../service/impl/UserServiceImpl";
+import {DiscountService} from "../service/DiscountService";
+import {DiscountController} from "../controller/DiscountController";
+import {DiscountRepositoryImpl} from "../repository/impl/DiscountRepositoryImpl";
+import {DiscountServiceImpl} from "../service/impl/DiscountServiceImpl";
 
 export class ApplicationContext {
     readonly serviceFood: FoodService;
@@ -24,12 +28,15 @@ export class ApplicationContext {
     readonly controllerTable: TableController;
     readonly serviceUser: UserService;
     readonly controllerUser: UserController;
+    readonly serviceDiscount: DiscountService;
+    readonly controllerDiscount: DiscountController;
 
     constructor(mongo) {
         const repositoryFood = new FoodRepositoryImpl(mongo);
         const repositoryOrder = new OrderRepositoryImpl(mongo);
         const repositoryTable = new TableRepositoryImpl(mongo);
         const repositoryUser = new UserRepositoryImpl(mongo);
+        const repositoryDiscount = new DiscountRepositoryImpl(mongo);
 
         this.serviceFood = new FoodServiceImpl(repositoryFood);
         this.controllerFood = new FoodController(this.serviceFood);
@@ -39,5 +46,7 @@ export class ApplicationContext {
         this.controllerTable = new TableController(this.serviceTable);
         this.serviceUser = new UserServiceImpl(repositoryUser);
         this.controllerUser = new UserController(this.serviceUser);
+        this.serviceDiscount = new DiscountServiceImpl(repositoryDiscount);
+        this.controllerDiscount = new DiscountController(this.serviceDiscount);
     }
 }

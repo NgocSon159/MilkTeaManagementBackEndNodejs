@@ -66,6 +66,17 @@ export class MongoUtil {
         }));
     }
 
+    public static rxCount(collection: Collection, object: any = {}): Observable<any> {
+        return fromPromise(new Promise(((resolve, reject) => {
+            collection.count({}, function(error, numOfDocs){
+                if (error !== null) {
+                    return reject(error);
+                }
+                return resolve(numOfDocs);
+            });
+        })));
+    }
+
     public static rxInsert<T>(collection: Collection, object: any): Observable<T> {
         return fromPromise(new Promise<T>(((resolve, reject) => {
             collection.insertOne(object, (err, result: InsertOneWriteOpResult) => {

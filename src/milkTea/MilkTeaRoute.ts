@@ -3,12 +3,14 @@ import {ApplicationContext} from "./config/ApplicationContext";
 import {OrderController} from "./controller/OrderController";
 import {TableController} from "./controller/TableController";
 import {UserController} from "./controller/UserController";
+import {DiscountController} from "./controller/DiscountController";
 
 export class MilkTeaRoute {
     foodController: FoodController;
     orderController: OrderController;
     tableController: TableController;
     userController: UserController;
+    discountController: DiscountController;
 
     constructor(mongo) {
         const applicationContext = new ApplicationContext(mongo);
@@ -16,6 +18,7 @@ export class MilkTeaRoute {
         this.orderController = applicationContext.controllerOrder;
         this.tableController = applicationContext.controllerTable;
         this.userController = applicationContext.controllerUser;
+        this.discountController = applicationContext.controllerDiscount;
     }
 
     routes(app) {
@@ -70,5 +73,11 @@ export class MilkTeaRoute {
             .post(this.tableController.search.bind(this.tableController));
         app.route(parentPathNameTable + "/full")
             .get(this.tableController.getTableFull.bind(this.tableController));
+        app.route(parentPathNameTable + "/updatePayment/:tableId")
+            .get(this.tableController.updateTablePayment.bind(this.tableController));
+
+        const parentPathNameDiscount = '/discount';
+        app.route(parentPathNameDiscount)
+            .get(this.discountController.getAll.bind(this.discountController));
     }
 }

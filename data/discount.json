@@ -1,0 +1,10 @@
+[{
+    "discountId": "DC001",
+    "name": "Khuyen mai cuoi nam",
+    "branchId": "BR001",
+    "startDate": "2019-11-20T12:10:40Z",
+    "endDate" :"2020-12-20T12:10:40Z",
+    "listFood": {
+        "20": ["FO001","FO002","FO003","FO004"]
+    }
+}]

@@ -95,16 +95,24 @@ export class OrderRepositoryImpl implements OrderRepository {
             })
         }
         obj.foods = foodArr;
-        return MongoUtil.rxInsert(this.db.collection(orderCollectionName), obj).pipe(flatMap((obj1) => {
-            const updateTable: Table = {
-                orderId: obj.orderId,
-                statusTable: TableEnum.Full
-            };
-            return MongoUtil.rxUpdate(this.db.collection(tableCollectionName), {tableId: obj.tableId}, updateTable).pipe(flatMap((result1) => {
-                return of(obj1);
-            }));
+        obj.createdOn = DateUtil.createDateAsUTC(new Date());
+        return MongoUtil.rxCount(this.db.collection(orderCollectionName)).pipe(flatMap((amount) => {
+            console.log("amout", amount);
+            if(amount) {
+                obj.orderId = `OR0000${Number(amount) + 1}`
+            }
+            return MongoUtil.rxInsert(this.db.collection(orderCollectionName), obj).pipe(flatMap((obj1) => {
+                const updateTable: Table = {
+                    orderId: obj.orderId,
+                    statusTable: TableEnum.Full
+                };
+                return MongoUtil.rxUpdate(this.db.collection(tableCollectionName), {tableId: obj.tableId}, updateTable).pipe(flatMap((result1) => {
+                    return of(obj1);
+                }));
 
-        }));
+            }));
+        }))
+
     }
 
     updateOrderProcessing(order: Order, userName: string): Observable<Order> {

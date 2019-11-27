@@ -6,5 +6,6 @@ import {TableSM} from "../search-Model/TableSM";
 export interface TableRepository {
     getAll(): Observable<Table[]>
     search(s: TableSM): Observable<SearchResult<Table>>;
-    getTableFull(): Observable<Table[]>
+    getTableFull(): Observable<Table[]>;
+    updateTablePayment(tableId: number): Observable<Table>;
 }
