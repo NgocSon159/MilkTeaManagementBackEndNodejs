@@ -154,7 +154,7 @@
     "total": 59000,
     "cash": "",
     "change": "",
-    "statusOrder": "Ordered",
+    "statusOrder": "Completed",
     "status": true,
     "foods": [
       {
@@ -189,7 +189,7 @@
     "total": 118000,
     "cash": "",
     "change": "",
-    "statusOrder": "Processing",
+    "statusOrder": "Completed",
     "status": true,
     "foods": [
       {

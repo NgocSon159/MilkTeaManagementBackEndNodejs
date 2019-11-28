@@ -77,27 +77,52 @@ function sendMessageToBarista() {
         }
     })
 }
+
+function sendMessageToCashier() {
+    arr.map((item: any) => {
+        if(item.roleId === 'RCashier') {
+            item.socket.emit('plsUpdateCashier')
+        }
+    })
+}
+
+function sendMessageToWaiter() {
+    arr.map((item: any) => {
+        if(item.roleId === 'RWaiter') {
+            item.socket.emit('plsUpdateWaiter')
+        }
+    })
+}
 io.on('connection', (socket: any) => {
     console.log('Connected client on port %s.', PORT);
     socket.on('sendUserName', (loginInfo) => {
-        if(!checkExist(loginInfo.userName)) {
-            const user = {
-                socket: socket,
-                userName: loginInfo.userName,
-                roleId: loginInfo.roleId
-            };
+        if(loginInfo) {
+            if(!checkExist(loginInfo.userName)) {
+                const user = {
+                    socket: socket,
+                    userName: loginInfo.userName,
+                    roleId: loginInfo.roleId
+                };
 
-            arr.push(user);
-            console.log('data', loginInfo.userName, loginInfo.roleId);
-            console.log('socket', socket.id);
-            console.log('arr', arr);
+                arr.push(user);
+                console.log('data', loginInfo.userName, loginInfo.roleId);
+                console.log('socket', socket.id);
+                console.log('arr', arr);
+            }
         }
-
         // this.io.emit('message', m);
     });
 
     socket.on('baristaUpdate', () => {
         sendMessageToBarista();
+    });
+
+    socket.on('cashierUpdate', () => {
+        sendMessageToCashier();
+    });
+
+    socket.on('waiterUpdate', () => {
+        sendMessageToWaiter();
     });
 
     // socket.on('disconnect', () => {
