@@ -62,7 +62,7 @@ export class OrderRepositoryImpl implements OrderRepository {
             listOrder.map(item => {
                 let listFood = item.foods;
                 listFood = listFood.filter(item1 => {
-                    if (item1.statusFood === FoodStatusEnum.Ordered || item1.statusFood === FoodStatusEnum.Processing) {
+                    if (item1.statusFood === FoodStatusEnum.Ordered || item1.statusFood === FoodStatusEnum.Processing || item1.statusFood === FoodStatusEnum.Finished) {
                         return true;
                     } else return false;
                 });
@@ -133,6 +133,8 @@ export class OrderRepositoryImpl implements OrderRepository {
     }
 
     updateFoodFinished(order: Order, foodId: string): Observable<Order> {
+        delete order.id;
+        delete order["_id"];
         order.foods.map(item => {
             if (item.foodId === foodId) {
                 item.statusFood = FoodStatusEnum.Finished;
@@ -157,6 +159,8 @@ export class OrderRepositoryImpl implements OrderRepository {
     }
 
     updateOrderServed(order: Order): Observable<Order> {
+        delete order.id;
+        delete order["_id"];
         order.foods.map(item => {
             item.statusFood = FoodStatusEnum.Finished
         });
@@ -167,6 +171,8 @@ export class OrderRepositoryImpl implements OrderRepository {
     }
 
     updateOrderCompleted(object: Order, userName: string): Observable<Order> {
+        delete object.id;
+        delete object["_id"];
         const query = {
             orderId: object.orderId
         };
@@ -185,6 +191,8 @@ export class OrderRepositoryImpl implements OrderRepository {
     }
 
     cancelOrder(order: Order): Observable<any> {
+        delete order.id;
+        delete order["_id"];
         const query = {
             orderId: order.orderId
         };

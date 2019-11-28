@@ -17,3 +17,7 @@ mongoimport --host localhost --db MilkTea --collection Branch --type json --file
 mongoimport --host localhost --db MilkTea --collection User --type json --file ./users_init.json --jsonArray --maintainInsertionOrder
 
 mongoimport --host localhost --db MilkTea --collection Discount --type json --file ./discount.json --jsonArray --maintainInsertionOrder
+
+mongoimport --host localhost --db MilkTea --collection Customer --type json --file ./customer_init.json --jsonArray --maintainInsertionOrder
+
+mongoimport --host localhost --db MilkTea --collection Rank --type json --file ./rank_init.json --jsonArray --maintainInsertionOrder

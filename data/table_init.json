@@ -7,7 +7,7 @@
     {
         "tableId": 2,
         "orderId": "",
-        "statusTable": "Full"
+        "statusTable": "Empty"
     },
     {
         "tableId": 3,
@@ -17,7 +17,7 @@
     {
         "tableId": 4,
         "orderId": "",
-        "statusTable": "Full"
+        "statusTable": "Empty"
     },
     {
         "tableId": 5,

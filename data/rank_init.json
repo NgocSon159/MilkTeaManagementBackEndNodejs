@@ -1,0 +1,44 @@
+[
+  {
+    "_id": {
+      "$oid": "5caafdcf095cc100745585f2"
+    },
+    "rankId": "R01",
+    "name": "Standard",
+    "discount": {
+      "$numberInt": "0"
+    },
+    "point": {
+      "$numberInt": "0"
+    },
+    "status": true
+  },
+  {
+    "_id": {
+      "$oid": "5caafe3d095cc100745585f3"
+    },
+    "rankId": "R02",
+    "name": "VIP",
+    "discount": {
+      "$numberInt": "5"
+    },
+    "point": {
+      "$numberInt": "500"
+    },
+    "status": true
+  },
+  {
+    "_id": {
+      "$oid": "5caafe4a095cc100745585f4"
+    },
+    "rankId": "R03",
+    "name": "Premium",
+    "discount": {
+      "$numberInt": "10"
+    },
+    "point": {
+      "$numberInt": "1000"
+    },
+    "status": true
+  }
+]

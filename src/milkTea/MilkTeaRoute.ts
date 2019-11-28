@@ -4,6 +4,7 @@ import {OrderController} from "./controller/OrderController";
 import {TableController} from "./controller/TableController";
 import {UserController} from "./controller/UserController";
 import {DiscountController} from "./controller/DiscountController";
+import {CustomerController} from "./controller/CustomerController";
 
 export class MilkTeaRoute {
     foodController: FoodController;
@@ -11,6 +12,7 @@ export class MilkTeaRoute {
     tableController: TableController;
     userController: UserController;
     discountController: DiscountController;
+    customerController: CustomerController;
 
     constructor(mongo) {
         const applicationContext = new ApplicationContext(mongo);
@@ -19,6 +21,7 @@ export class MilkTeaRoute {
         this.tableController = applicationContext.controllerTable;
         this.userController = applicationContext.controllerUser;
         this.discountController = applicationContext.controllerDiscount;
+        this.customerController = applicationContext.controllerCustomer;
     }
 
     routes(app) {
@@ -81,5 +84,9 @@ export class MilkTeaRoute {
         const parentPathNameDiscount = '/discount';
         app.route(parentPathNameDiscount)
             .get(this.discountController.getAll.bind(this.discountController));
+
+        const parentPathNameCustomer= '/customer/:id';
+        app.route(parentPathNameCustomer)
+            .get(this.customerController.getById.bind(this.customerController));
     }
 }
