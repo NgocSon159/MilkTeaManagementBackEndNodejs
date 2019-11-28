@@ -7,12 +7,14 @@ import * as http from "http";
 import {MongoUtil} from "../common/util/MongoUtil";
 import {Db} from "mongodb";
 import {MilkTeaRoute} from "./MilkTeaRoute";
+import * as socketIo from 'socket.io';
 
 const MongoUrl = config.MONGO.URL;
 const Database = config.MONGO.DB;
 const PoolSize = config.MONGO.POOL_SIZE;
 
 const PORT = config.HTTP_PORT;
+const SOCKETPORT = config.SOCKET_PORT;
 
 export class App {
     protected app: Application;
@@ -47,6 +49,58 @@ export class App {
 }
 
 const app = new App(MongoUrl, Database, PoolSize);
-http.createServer(app.getApp()).listen(PORT, () => {
+const server = http.createServer(app.getApp());
+
+
+
+const io = socketIo(server);
+io.listen(SOCKETPORT);
+server.listen(PORT, () =>{
     console.log('HTTP Express server listening on port ' + PORT);
+});
+const arr = [];
+
+function checkExist(userName: string) {
+    let flag = false;
+    arr.map((item: any) => {
+        if(item.userName === userName) {
+            flag = true;
+        }
+    })
+    return flag;
+}
+
+function sendMessageToBarista() {
+    arr.map((item: any) => {
+        if(item.roleId === 'RBarista') {
+            item.socket.emit('plsUpdateKitchen')
+        }
+    })
+}
+io.on('connection', (socket: any) => {
+    console.log('Connected client on port %s.', PORT);
+    socket.on('sendUserName', (loginInfo) => {
+        if(!checkExist(loginInfo.userName)) {
+            const user = {
+                socket: socket,
+                userName: loginInfo.userName,
+                roleId: loginInfo.roleId
+            };
+
+            arr.push(user);
+            console.log('data', loginInfo.userName, loginInfo.roleId);
+            console.log('socket', socket.id);
+            console.log('arr', arr);
+        }
+
+        // this.io.emit('message', m);
+    });
+
+    socket.on('baristaUpdate', () => {
+        sendMessageToBarista();
+    });
+
+    // socket.on('disconnect', () => {
+    //     console.log('Client disconnected');
+    // });
 });
