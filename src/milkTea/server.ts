@@ -58,7 +58,7 @@ io.listen(SOCKETPORT);
 server.listen(PORT, () =>{
     console.log('HTTP Express server listening on port ' + PORT);
 });
-const arr = [];
+let arr = [];
 
 function checkExist(userName: string) {
     let flag = false;
@@ -93,10 +93,21 @@ function sendMessageToWaiter() {
         }
     })
 }
+
+function checkConnect() {
+    let newArr = [];
+    arr.map((item: any) => {
+        if(item.socket.connected === true) {
+            newArr.push(item);
+        }
+    })
+    arr = newArr;
+}
 io.on('connection', (socket: any) => {
+    console.log(socket.id);
     console.log('Connected client on port %s.', PORT);
     socket.on('sendUserName', (loginInfo) => {
-        if(loginInfo) {
+        if(loginInfo && loginInfo !== undefined) {
             if(!checkExist(loginInfo.userName)) {
                 const user = {
                     socket: socket,
@@ -114,18 +125,21 @@ io.on('connection', (socket: any) => {
     });
 
     socket.on('baristaUpdate', () => {
+        console.log('baristaUpdate');
         sendMessageToBarista();
     });
 
     socket.on('cashierUpdate', () => {
+        console.log('cashierUpdate');
         sendMessageToCashier();
     });
 
     socket.on('waiterUpdate', () => {
+        console.log('waiterUpdate');
         sendMessageToWaiter();
     });
 
-    // socket.on('disconnect', () => {
-    //     console.log('Client disconnected');
-    // });
+    socket.on('disconnect', (socket) => {
+        checkConnect();
+    });
 });
