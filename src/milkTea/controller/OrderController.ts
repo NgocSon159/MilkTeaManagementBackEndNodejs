@@ -112,4 +112,13 @@ export class OrderController {
             return ResponseUtil.responseError(res, error);
         });
     }
+
+    reOrder(req: Request, res: Response) {
+        const order = OrderBuilder.buildToOrder(req.body);
+        return this.orderService.reOrder(order).subscribe(result => {
+            return ResponseUtil.responseSuccess(res, result);
+        }, error => {
+            return ResponseUtil.responseError(res, error);
+        });
+    }
 }

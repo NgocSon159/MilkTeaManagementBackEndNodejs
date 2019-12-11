@@ -207,4 +207,14 @@ export class OrderRepositoryImpl implements OrderRepository {
             }))
         }));
     }
+    reOrder(order: Order): Observable<Order> {
+        const query = {
+            tableId: order.tableId,
+            statusOrder: OrderStatusEnum.Ordered
+        }
+        return MongoUtil.rxFindOne(this.db.collection(orderCollectionName), query).pipe(flatMap((result => {
+            // @ts-ignore
+            return MongoUtil.rxUpdate(this.db.collection(orderCollectionName), {orderId: result.orderId}, order);
+        })))
+    }
 }

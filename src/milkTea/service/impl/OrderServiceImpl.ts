@@ -53,4 +53,8 @@ export class OrderServiceImpl implements OrderService{
     cancelOrder(order: Order): Observable<Order> {
         return this.orderRepository.cancelOrder(order);
     }
+
+    reOrder(order: Order): Observable<Order> {
+        return this.orderRepository.reOrder(order);
+    }
 }

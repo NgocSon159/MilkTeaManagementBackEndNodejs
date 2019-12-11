@@ -61,6 +61,8 @@ export class MilkTeaRoute {
             .post(this.orderController.insert.bind(this.orderController));
         app.route(parentPathNameOrder + '/cancelOrder') // to cancel order
             .put(this.orderController.cancelOrder.bind(this.orderController));
+        app.route(parentPathNameOrder + '/reOrder') // to reorder order
+            .put(this.orderController.reOrder.bind(this.orderController));
 
         // For Cashier
         app.route(parentPathNameOrder + '/user/cashier')

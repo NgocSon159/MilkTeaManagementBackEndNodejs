@@ -15,4 +15,5 @@ export interface OrderRepository {
     updateOrderServed(order: Order): Observable<Order>;
     updateOrderCompleted(object: Order, userName: string): Observable<Order>;
     cancelOrder(order: Order): Observable<Order>;
+    reOrder(order: Order): Observable<Order>;
 }
