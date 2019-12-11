@@ -70,6 +70,16 @@ function checkExist(userName: string) {
     return flag;
 }
 
+function findIndex(userName: string) {
+    let indexItem = -1;
+    arr.map((item: any, index: number) => {
+        if(item.userName === userName) {
+            indexItem = index;
+        }
+    })
+    return indexItem;
+}
+
 function sendMessageToBarista() {
     arr.map((item: any) => {
         if(item.roleId === 'RBarista') {
@@ -115,6 +125,19 @@ io.on('connection', (socket: any) => {
                     roleId: loginInfo.roleId
                 };
 
+                arr.push(user);
+                console.log('data', loginInfo.userName, loginInfo.roleId);
+                console.log('socket', socket.id);
+                console.log('arr', arr);
+            } else {
+                const index = findIndex(loginInfo.userName);
+                console.log('index', index);
+                arr.splice(index,1);
+                const user = {
+                    socket: socket,
+                    userName: loginInfo.userName,
+                    roleId: loginInfo.roleId
+                };
                 arr.push(user);
                 console.log('data', loginInfo.userName, loginInfo.roleId);
                 console.log('socket', socket.id);
